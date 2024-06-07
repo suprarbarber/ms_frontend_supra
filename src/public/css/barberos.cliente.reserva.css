@@ -7,98 +7,21 @@
 /* Importacion de la fuente itim  */
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Coiny&family=Itim&display=swap');
 
-
-
-#lt, #btn-reservar{
-    font-family: "Bona Nova", serif;
-    font-weight: 400;
-    font-style: normal;
+#barberos{
+    height: 458px;
+}
+#barber{
+    cursor: pointer;
 }
 
-#barberia, #citas{
-    font-size: 25px;
-    font-family: "Bona Nova", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-   
-#side_nav{
-    background: #6A6E80;
-    min-width: 250px;
-    max-width: 250px;
-    transition: all 0.3s;
-}
-.content{
-    min-height: 100vh;
-    width: 100%;
-}
-hr.h-color{
-    background: #eee;
-}
-
-.sidebar li.active{
-    background: #9BC3FF;
-    border-radius: 8px;
-}
-
-.sidebar li.active a, .sidebar li.active a:hover {
-    color: #fff;
-}
-.sidebar li a{
-    color: #000;
-}
-
-@media(max-width: 767px){
-#side_nav{
-    margin-left: -250px;
-    position: absolute;
-    min-height: 100vh;
-    z-index: 1;
-
-}
-#side_nav.active{
-    margin-left: 0;
-}
-
-#form{
-    margin-right: 30px;
-}
-
-
-}
-
-/* Barra de busqueda  */
-
-#barra{
-    height: 45px;
-}
-
-#form{
-    position: relative;
-    height: 100%;
-}
-
-#buscar{
-    width: 100%;
-    border-radius: 20px;
-    height: 40px;
-    border: 3px #4F028B solid;
-    height: 100%;
-}
-
-#img-lupa{
-    width: 25px;
-    height: 25px;
-    background: url(../img/lupa.png);
-    background-size: 100% 100%;
-    position: absolute;
-    right: 20px;
-}
-
-#coment{
+#text-help{
     font-family: "Goudy Bookletter 1911", serif;
     font-weight: 400;
     font-style: normal
+}
+
+#content-btn{
+    position: relative;
 }
 
 #btn-siguiente{
@@ -106,14 +29,7 @@ hr.h-color{
     cursor: pointer; 
     height: 65px;
     position: absolute;
-    right: 35px;
-}
-
-
-/* clase para centar  */
-.center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    bottom: 10px;
+    right: 20px;
+    
 }

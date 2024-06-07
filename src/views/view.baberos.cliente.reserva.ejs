@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/inicio.clientes.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+<%- include('partials/headerhtml') %>
     
-    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/barberos.cliente.reserva.css" />
+    <title>Reserva barberos</title>
 </head>
 
 <body>
@@ -24,8 +16,55 @@
       <!-- fin barra superior  -->
 
       <!-- contenido de la pagina  -->
-            
+      <div class="row ps-2" style="position: relative;">
 
+        <!-- barra de busqueda  -->
+        <nav class="navbar text-center my-5 p-0 center">
+
+            <form class="d-flex center" role="search" style="width: 80%;">
+
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+            </form>
+        </nav>
+        
+        <!-- contenedor barberos  -->
+            <div class="row ps-2" style="position: relative;" id="barberos">
+            
+            <h2 class="col-md-12 fs-2 mt-2 center mb-4" id="text-help">Seleccione su barbero</h2>
+            
+            <div class="row mt-4 d-flex justify-content-around" style="height: 500px;">
+                <!-- Barberos -->
+                <div class="col-md-3 col-lg-3">
+                    <div class="card bg-dark text-light center flex-direction-column py-4 " id="barber">
+                        <img class="me-4 mb-2 rounded-circle" src="./img/barbero1.png" width="90px" height="90px">
+                        <h5 class="card-title ms-2">Hector Muñoz</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-lg-3">
+                    <div class="card bg-dark text-light center flex-direction-column py-4 " id="barber">
+                        <img class="me-4 mb-2 rounded-circle" src="./img/barbero2.png" width="90px" height="90px">
+                        <h5 class="card-title ms-2">Hector Muñoz</h5>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-lg-3">
+                    <div class="card bg-dark text-light center flex-direction-column py-4 " id="barber">
+                        <img class="me-4 mb-2 rounded-circle" src="./img/barbero3.png" width="90px" height="90px">
+                        <h5 class="card-title ms-2">Hector Muñoz</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Boton siguiente  -->
+        <div class="row" id="content-btn">
+            <div class="col-md-3">
+                <button class="btn fs-5 text-light" id="btn-siguiente">
+                    Siguiente
+                </button>
+            </div>
+        </div>
+            
     </div>
   
 

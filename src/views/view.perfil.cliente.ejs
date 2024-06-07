@@ -1,0 +1,86 @@
+<%- include('partials/headerhtml') %>
+
+    <link rel="stylesheet" href="./css/inicio.clientes.css" />
+    <title>Inicio</title>
+</head>
+
+<body>
+  <div class="main-container d-flex">
+    <!-- barra lateral  -->
+     <%- include('partials/sidebar') %>
+     
+    <div class="content">
+
+      <!-- barra de navegacion superior  -->
+      <%- include('partials/navbar') %>
+      <!-- fin barra superior  -->
+
+      <!-- contenido de la pagina  -->
+        <div class="row">
+            <div class="contenido-content center" id="contenidos">
+                
+                <img src="img/usuario.png" class="imagen-pefil" width="123px" height="123px">
+
+                <div class="container-fluid" id="caja">
+
+                    <!-- cuadro azul  -->
+                    <div class="caja border rounded center" id="datos">
+
+                        <!-- tabla de datos  -->
+
+                        <div class="list-group ms-3" id="list-group">
+
+                            
+                            <!-- campo id  -->
+                            <button type="button" class="list-group-item list-group-item-action" disabled>Identificación<br>
+                                <p class="fs-5">1020405548</p>
+                            </button>
+                            <!-- campo nombre  -->
+                            <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
+
+                                <div id="titu" class="d-flex flex-column">Nombre de usuario<br>
+                                    <p class="fs-5 text-dark">Hector Muñoz de la Peña</p>
+                                </div>
+                                
+                                <div id="edit">
+                                    <p><a class="link-offset-2 link-underline link-underline-opacity-50" href="#">Editar</a></p>
+                                </div>
+
+                            </button>
+
+
+                            <!-- campo Correo  -->
+                            <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
+
+                                <div id="titu" class="d-flex flex-column">Correo electronico<br>
+                                    <p class="fs-5 text-dark">hector@gmail.com</p>
+                                    </div>
+                                <div id="edit">
+                                    <p><a class="link-offset-2 link-underline link-underline-opacity-50" href="#">Editar</a></p>
+                                </div>
+                                
+                            </button>
+
+                            <!-- telefono  -->
+                            <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between" id="op">
+
+                                <div id="titu" class="d-flex flex-column">Telefono<br>
+                                    <p class="fs-5 text-dark">3157316581</p>
+                                    </div>
+                                <div id="edit">
+                                    <p><a class="link-offset-2 link-underline link-underline-opacity-50" href="#">Editar</a></p>
+                                </div>
+                                
+                            </button>
+
+    
+    </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/script.barra.lateral.js"></script>
+
+
+</body>
+</html>
