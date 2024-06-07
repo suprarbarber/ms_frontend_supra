@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/inicio.clientes.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    
+    <title>Inicio</title>
+</head>
+
+<body>
+  <div class="main-container d-flex">
+    <!-- barra lateral  -->
+     <%- include('partials/sidebar') %>
+     
+    <div class="content">
+
+      <!-- barra de navegacion superior  -->
+      <%- include('partials/navbar') %>
+      <!-- fin barra superior  -->
+
+      <!-- contenido de la pagina  -->
+      <div class="contenido-content center" id="contenido">
+        <!-- header content  -->
+        <div class="content-header text-center">
+          <p class="fs-3">Hola Angie, bienvenido a Supra Barber</p>
+          <p class="fs-3" id="lo">¡Empieza hoy con nosotros!</p>
+          </div>
+          
+          <!-- body content  -->
+          <div class="content-body text-center px-4" style="width: 100%;">
+            <!-- bonton reserva -->
+            <button class="btn btn-md fs-4" id="btn-reservar">Reservar cita</button>
+
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" style="background: #036d74;" >
+                  <span class="text text-center">
+                    <p class="fs-2 text-secondary mt-3">Hoy celebramos en Supra Barber<br>
+                        el dia del hombre, disfruta del 20% de descuento<br>
+                        en todos los cortes hasta el 2 de diciembre.
+                    </p>
+                    <p class="litle fs-2 text-dark" id="co">codigo #46477</p>
+                </span>
+                </div>
+                <div class="carousel-item" style="background: #32D8CE;">                  
+                  <span class="text text-center">
+                    <p class="fs-2 text-secondary mt-3">Hoy celebramos en Supra Barber<br>
+                        el dia del hombre, disfruta del 20% de descuento<br>
+                        en todos los cortes hasta el 2 de diciembre.
+                    </p>
+                    <p class="litle fs-2 text-dark" id="co">codigo #46477</p>
+                </span>
+                </div>
+                <div class="carousel-item" style="background: #52018c;" >
+                  <span class="text text-center">
+                    <p class="fs-2 text-secondary mt-3">Hoy celebramos en Supra Barber<br>
+                        el dia del hombre, disfruta del 20% de descuento<br>
+                        en todos los cortes hasta el 2 de diciembre.
+                    </p>
+                    <p class="litle fs-2 text-dark" id="co">codigo #46477</p>
+                </span>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+
+
+
+
+
+
+
+
+          <!-- contenedor del carrusel  -->
+
+          <!-- carrusel de anuncios  -->
+
+          <!-- primer anuncio  -->
+          <!-- segundo anuncio  -->
+          <!-- tercer anuncio  -->
+          <!-- boton de anuncio anterior  -->
+
+          <!-- boton de siguiente anuncio  -->
+
+
+        </div>
+        
+      </div>
+        
+    </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/script.barra.lateral.js"></script>
+
+
+</body>
+</html>

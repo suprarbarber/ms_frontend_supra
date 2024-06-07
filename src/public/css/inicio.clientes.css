@@ -1,0 +1,134 @@
+/* Importacion de la fuente Bona nova  */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Inportacion de la fuente goudy bookletter  */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Coiny&family=Goudy+Bookletter+1911&family=Itim&display=swap');
+
+/* Importacion de la fuente itim  */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Coiny&family=Itim&display=swap');
+
+/* Importacion de la fuente bowlby  */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Bowlby+One+SC&family=Coiny&family=Goudy+Bookletter+1911&family=Itim&display=swap');
+
+
+#lt{
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#barberia, #citas{
+    font-size: 25px;
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body{
+    background: #eee;
+}
+   
+#side_nav{
+    background: #6A6E80;
+    min-width: 250px;
+    max-width: 250px;
+    transition: all 0.3s;
+}
+.content{
+    min-height: 100vh;
+    width: 100%;
+}
+hr.h-color{
+    background: #eee;
+}
+
+.sidebar li.active{
+    background: #9BC3FF;
+    border-radius: 8px;
+}
+
+.sidebar li.active a, .sidebar li.active a:hover {
+    color: #fff;
+}
+.sidebar li a{
+    color: #000;
+}
+
+
+@media(max-width: 767px){
+    #side_nav{
+        margin-left: -250px;
+        position: absolute;
+        min-height: 100vh;
+        z-index: 1;
+    }
+
+    #side_nav.active{
+        margin-left: 0;
+    }
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contenido{
+    height: 91%;
+    background: url(../img/fondo.inicio.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex-direction: column;
+}
+
+/* para los parrafos del cuerpo  */
+p{
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+#text, #codigo, h6 {
+    font-size: 35px;
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+h6{
+    color: #fff;
+}
+
+/* para el text "empieza hoy con nosotros"  */
+#contenido #lo{
+    margin-bottom: 85px;
+}
+
+/* para el boton de reservar */
+
+#btn-reservar{
+    padding: 10px 60px 10px 60px;
+    background: #ED3030;
+    border-radius: 5px;
+    border: 1px;
+    color: white;
+    font-family: "Itim", cursive;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 100px;
+}
+
+#co{
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
