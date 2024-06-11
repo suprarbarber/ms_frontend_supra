@@ -1,9 +1,10 @@
-import { Router } from "express"
-import { inicio, reservar } from "../controllers/controller.inicio";
+import { Router } from "express";
+import { inicio, login, registro } from "../controllers/controller.inicio";
 
 const rutaInicio = Router();
 
-rutaInicio.get("/", inicio)
-rutaInicio.get("/reserva", reservar)
+rutaInicio.get("/", inicio);
+rutaInicio.get("/logueo", login);
+rutaInicio.get("/registro", registro);
 
 export default rutaInicio;
