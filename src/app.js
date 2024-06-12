@@ -3,6 +3,7 @@ import path from "path";
 import { config } from "dotenv"
 config();
 import ruta from "./routes/index"
+import { msjconsola } from "./message/msj";
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views')
 app.set('views', path.join(__dirname, 'views'));
 app.set('port', process.env.PORT)
+app.set('mensajeconsola', msjconsola)
 
 app.use(express.static(path.join(__dirname, 'public')));
 

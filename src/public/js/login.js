@@ -13,6 +13,7 @@ const loguear = async() => {
             'Content-Type' : 'application/json'
         },
         body : JSON.stringify({
+            // se deben poner lo campos tal cual estan en thunder client 
             correo : correo,
             contrasena : contra
         })
