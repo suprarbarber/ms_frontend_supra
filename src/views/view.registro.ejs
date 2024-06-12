@@ -18,7 +18,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 py-3" id="l">
+            <div class="col-md-6 col-lg-6 py-3" id="l">
                 <h1 class="text-light text-center pt-3 pb-3" id="title">¡Hola, Bienvenido!</h1>
                 
                 <div class="col-md-12 d-flex align-items-center justify-content-center">
@@ -26,26 +26,54 @@
                     <div class="borde d-flex align-items-center justify-content-center">
             
                         <div class="container text-center py-4 " >
-                            <form>
-                        
-                                <input class="form-control mb-3" id="nombre" type="text"  placeholder="Nombre">
-                                <input class="form-control mb-3" id="identificacion" type="number" placeholder="Identificacion">
-                                <input class="form-control mb-3" id="email" type="text" placeholder="Correo Electronico">
-                                <input class="form-control mb-3" id="telefono" type="number" placeholder="Telefono">
-                                <input class="form-control mb-3" id="contrasena" type="text" placeholder="Contraseña">
-                                <div class="mb-3">                            
-                                    <select id="disabledSelect" class="form-select">
-                                      <option>Barbero</option>
-                                      <option>Cliente</option>
-
+                            <form class="needs-validation" novalidate>
+                                <div class="col-12">
+                                    <input class="form-control mb-3" id="id" type="number" placeholder="Identificacion">
+                                    <div class="invalid-feedback">
+                                        Es necesario ingresar la identificación
+                                    </div>                                
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-control mb-3" id="nombre" type="text"  placeholder="Nombre">
+                                    <div class="invalid-feedback">
+                                        Es necesario ingresar el nombre
+                                    </div>                                
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-control mb-3" id="email" type="email" placeholder="Correo Electronico">
+                                    <div class="invalid-feedback">
+                                        Es necesario ingresar el correo electronico
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-control mb-3" id="telefono" type="number" placeholder="Telefono">
+                                    <div class="invalid-feedback">
+                                        Es necesario ingresar el nombre
+                                    </div>                                
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-control mb-3" id="contrasena" type="password" placeholder="Contraseña">
+                                    <div class="invalid-feedback">
+                                        Es necesario ingresar el nombre
+                                    </div>                                
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <select id="roll" class="form-select">
+                                        <option value="cliente">Cliente</option>
+                                        <option value="barbero">Barbero</option>
                                     </select>
-                                  </div>
-            
-                                 <div class="d-grid gap-2">
-                                    <button class="btn text-light btn-border-with" id="btn-login">Registrar Cuenta</button>
+                                    <div class="invalid-feedback">
+                                        Es necesario ingresar el nombre
+                                    </div>                                
                                 </div>
 
-                                <p class=" d-flex align-items-center justify-content-center">¿Ya tienes una cuenta? <a href="./logueo" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bolder">   Iniciar Sesion</a></p>
+            
+                                <div class="d-grid gap-2">
+                                    <button class="btn text-light btn-border-with" type="submit" id="btn-login" onclick="">Registrar Cuenta</button>
+                                </div>
+                                <input type="hidden" id="url" value="<%= url %>">
+
+                                <p class=" d-flex align-items-center justify-content-center">¿Ya tienes una cuenta? <a href="./logueo" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bolder">Iniciar Sesion</a></p>
                             </form>
                         </div>
                     </div>
@@ -55,5 +83,8 @@
             <div class="col-md-6 d-sm-block d-none" id="img"></div>
         </div>
     </div>
+
+    <!-- script personal  -->
+     <script src="../js/registro"></script>
 </body>
 </html>

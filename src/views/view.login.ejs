@@ -35,8 +35,9 @@
                                 <input class="form-control mb-3" id="contrasena" type="text" placeholder="Contraseña">
                             </form>
                             <div class="d-grid gap-2">
+                                <input type="hidden" id="url" value="<%= url %>">
                                 <!-- boton iniciar sesion  -->
-                                <button class="btn text-light" id="btn-login">Iniciar Sesión</button>
+                                <button class="btn text-light" type="submit" id="btn-login" onclick="loguear()">Iniciar Sesión</button>
                                 <!-- link registrase  -->
                                 <p class=" d-flex align-items-center justify-content-center">¿No tienes cuenta?<a href="./registro" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Registrate</a></p>
                             </div>
@@ -49,6 +50,8 @@
             <div class="col-md-6 col-lg-7 d-sm-block d-none" id="img"></div>
         </div>
     </div>
+    <!-- script personal  -->
+     <script src="../js/login.js"></script>
 
     <!-- Importacion de los iconos  -->
     <script src="http://kit.fontawesome.com/e1d55cc160.js" crossorigin="anonymous"></script>

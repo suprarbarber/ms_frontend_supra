@@ -10,3 +10,8 @@ export const perfilCliente = (req, res) => {
     res.render('view.perfil.cliente.ejs')
 }
 
+export const ayuda = (req, res) => {
+    res.render('view.ayuda.cliente.ejs')
+}
+
+
