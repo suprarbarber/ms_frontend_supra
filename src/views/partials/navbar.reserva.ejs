@@ -29,8 +29,6 @@
 
 <!-- validar token  -->
  <script>
-    const usuario = document.getElementById("usuario").value;
-
     const token = sessionStorage.getItem("token")
 
     if(token == "" || token == null){
@@ -57,7 +55,7 @@
             window.location.href = "/login"
         }
 
-        // usuario.innerText = body.data.usuario
     })
 
  </script>
+

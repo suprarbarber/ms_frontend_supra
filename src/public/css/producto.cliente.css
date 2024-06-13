@@ -2,7 +2,10 @@
     width: 300px;
 }
 
-.scrollable-container {
-    height: 300px; /* Ajusta la altura según sea necesario */
-    overflow-y: auto; /* Agrega barra de desplazamiento vertical */
+#contenedorscrol{
+    height: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
 }
+
+
