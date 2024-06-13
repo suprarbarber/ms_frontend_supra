@@ -1,0 +1,8 @@
+#tarjeta{
+    width: 300px;
+}
+
+.scrollable-container {
+    height: 300px; /* Ajusta la altura según sea necesario */
+    overflow-y: auto; /* Agrega barra de desplazamiento vertical */
+}

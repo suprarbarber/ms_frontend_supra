@@ -32,4 +32,3 @@ const registro = (req, res ) => {
 };
 
 export { inicio, login, registro}
-

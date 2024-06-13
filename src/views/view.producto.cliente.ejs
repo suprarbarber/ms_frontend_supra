@@ -1,7 +1,7 @@
 <%- include('partials/headerhtml') %>
     
-    <link rel="stylesheet" href="./css/barberos.cliente.css" />
-    <title>Reserva barberos</title>
+    <link rel="stylesheet" href="./css/producto.cliente.css" />
+    <title>Productos</title>
 </head>
 
 <body>
@@ -27,17 +27,20 @@
                     </form>
                 </nav>
             </div>
-            <!-- contenedor barberos  -->
-            <div class="row p-3">
-                <div class="col-md-12 col-lg-12 center">
+            <!-- contenedor productos  -->
+            <div class="row p-3 bg-danger">
+                <div class="col-12 d-flex flex-wrap justify-content-center">
                     <% datos.forEach(element => { %>
-                        <!-- carta contenedora  -->
-                        <div class="card bg-dark text-light center text-center flex-direction-column py-4 mx-3" id="barber">
-                            <!-- imagen foto de perfil barbero  -->
-                            <img class="me-4 mb-2 rounded-circle" src="../img/producto.png" width="90px">
-                            <!-- nombre del barbero  -->
-                            <h5 class="card-title ms-2"> <%= element.nombre %></h5>
-    
+                        <div class="card text-center my-4 mx-2" id="tarjeta" style="width: 250px;">
+                            <!-- imagen  -->
+                            <img src="img/producto.png" class="card-img-top" height="150px" alt="...">
+                            <!-- cuerpo  -->
+                            <div class="card-body">
+                              <h5 class="card-title"><%= element.nombre %></h5>
+                              <p class="card-text"><%= element.descripcion %> </p>
+                              <!-- boton -->
+                              <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                            </div>
                         </div>
                     <% }); %>
                 </div>
