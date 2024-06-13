@@ -1,4 +1,4 @@
-const loguear = async() => {
+const loguin = async() => {
     const correo = document.getElementById('email').value;
     const contra = document.getElementById('contrasena').value;
     const url = document.getElementById('url').value;
@@ -23,9 +23,10 @@ console.log(urlsupra);
     .then(res => res.json())
     .then(data => {
         if(data.error == true){
-            console.log(data);
+            alertify.error('Contraseña errada');
         }else{
-            sessionStorage.setItem("token", data.body.token)                                                       
+            sessionStorage.setItem("token", data.body.token)
+            window.location.href = "./inicio"                                                     
         }
     })
     .catch(err => {

@@ -1,23 +1,3 @@
-(() => {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      form.classList.add('was-validated')
-    }, false)
-  })
-})()
-
-
 export const registrar = async() => {
     const id = document.getElementById('id').value;
     const nombre = document.getElementById('nombre').value;
@@ -31,6 +11,8 @@ export const registrar = async() => {
     sessionStorage.setItem("urlsupra", url);
     const urlsupra = sessionStorage.getItem('urlsupra') + "/api/registro"
 
+    console.log(urlsupra);
+
     const options = {
         method : 'POST',
         Headers : {
@@ -41,7 +23,7 @@ export const registrar = async() => {
             nombre : nombre,
             telefono : telefono,
             correo : correo,
-            clave : contra,
+            contrasena : contra,
             roll : roll
         })
     };
@@ -51,8 +33,8 @@ export const registrar = async() => {
     .then(data => {
         if(data.error == true){
             alertify.error('Error message');
-        }else{
-            sessionStorage.setItem("urlsupra", data.body.token)
+        } else{
+           console.log("hola");
         }
     })
     .catch(err => {

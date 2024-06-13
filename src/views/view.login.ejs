@@ -11,15 +11,21 @@
     <!-- custom css  -->
     <link rel="stylesheet" href="../css/login.css">
 
+    <!-- include the style -->
+    <link rel="stylesheet" href="./plugins/alertifyjs/css/alertify.min.css" />
+    <!-- include a theme -->
+    <link rel="stylesheet" href="./plugins/alertifyjs/css/themes/default.min.css" />
+
+
     
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <!-- seccion logueo  -->
-            <div class="col-md-6 col-lg-5 col-sm-12" id="l">
+            <div class="col-md-6 col-lg-5 col-sm-12 " id="l">
                 <!-- logotipo supra barber  -->
-                <h1 class="text-light" id="title"><a href="./">Supra Barber</a></h1>
+                <h1 class="text-light mt-3" id="title"><a href="./">Supra Barber</a></h1>
 
                 <div class="col-md-12 d-flex align-items-center justify-content-center" id="caja">
                     <!-- border degradado  -->
@@ -37,7 +43,7 @@
                             <div class="d-grid gap-2">
                                 <input type="hidden" id="url" value="<%= url %>">
                                 <!-- boton iniciar sesion  -->
-                                <button class="btn text-light" type="submit" id="btn-login" onclick="loguear()">Iniciar Sesión</button>
+                                <button class="btn text-light" type="submit" id="btn-login" onclick="loguin()">Iniciar Sesión</button>
                                 <!-- link registrase  -->
                                 <p class=" d-flex align-items-center justify-content-center">¿No tienes cuenta?<a href="./registro" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Registrate</a></p>
                             </div>
@@ -49,9 +55,15 @@
             <!-- contenedor imagen  -->
             <div class="col-md-6 col-lg-7 d-sm-block d-none" id="img"></div>
         </div>
-    </div>
+        </div>
+
+    <!-- script de alertifý  -->
+    <script src="./plugins/alertifyjs/alertify.min.js"></script>
+
     <!-- script personal  -->
      <script src="../js/login.js"></script>
+
+
 
     <!-- Importacion de los iconos  -->
     <script src="http://kit.fontawesome.com/e1d55cc160.js" crossorigin="anonymous"></script>

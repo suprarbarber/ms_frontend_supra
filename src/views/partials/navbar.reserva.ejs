@@ -26,3 +26,13 @@
         </div>
     </div>
 </nav>
+
+<!-- validar token  -->
+ <script>
+    const token = sessionStorage.getItem("token")
+    if(token == "" || token== null){
+        window.location.href = "./login"
+    }
+ </script>
+
+ <input type="hidden" id="tpk" value="<%= tpk %>">
