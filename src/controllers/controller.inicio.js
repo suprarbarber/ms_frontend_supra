@@ -1,14 +1,17 @@
 import { config } from "dotenv";
 config();
+/**
+ * Vista de inicio de la pagina
+ * @param {object} req peticion
+ * @param {object} res respuesta
+ */
 
-export const inicio = (req, res ) => {
-    // se trae la variable url del .env 
-    const tpk = process.env.TOKEN_PRIVATEKEY;
+const inicio = (req, res ) => {
 
-    res.render('view.inicio.ejs', {tpk});
+    res.render('view.inicio.ejs');
 };
 
-export const login = (req, res ) => {
+const login = (req, res ) => {
     // se trae la variable url del .env 
     const url = process.env.BACKEND_URL;
 
@@ -17,13 +20,16 @@ export const login = (req, res ) => {
     res.render('view.login.ejs', options);
 };
 
-export const registro = (req, res ) => {
+const registro = (req, res ) => {
     // se trae la variable url del .env 
     const url = process.env.BACKEND_URL;
+    
 
     const options = {url: url};
     
     // Se llama a la vista y se le manda la variable
     res.render('view.registro.ejs', options);
 };
+
+export { inicio, login, registro}
 

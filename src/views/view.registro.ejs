@@ -19,7 +19,9 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <!-- seccion formulario  -->
             <div class="col-md-6 col-lg-6 py-3" id="l">
+
                 <!-- icono de atras  -->
                 <a href="./"><i class="bi bi-arrow-left fs-4"></i></a>
 
@@ -31,7 +33,7 @@
             
                         <div class="container text-center py-4 " >
                             <!-- Se la agrega al formulario la veliadacion de bootstrap -->
-                            <form class="needs-validation" novalidate>
+                            <!-- <form class="needs-validation" novalidate> -->
 
                                 <div class="col-12">
                                     <!-- campo donde se solicita el campo  -->
@@ -88,22 +90,20 @@
                                 <input type="hidden" id="url" value="<%= url %>">
 
                                 <div class="d-grid gap-2">
-                                    <button class="btn text-light btn-border-with" type="submit" id="btn-login" onclick="registrar()">Registrar Cuenta</button>
+                                    <button class="btn text-light btn-border-with" id="btn-login" onclick="registrar()"> Registrar Cuenta</button>
                                 </div>
 
                                 <p class=" d-flex align-items-center justify-content-center">¿Ya tienes una cuenta? <a href="./login" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bolder">Iniciar Sesion</a></p>
-                            </form>
+                            <!-- </form> -->
                         </div>
                     </div>
                 </div>
-                
             </div>
+
+            <!-- seccion imagen  -->
             <div class="col-md-6 d-sm-block d-none" id="img"></div>
         </div>
     </div>
-
-    <!-- script personal  -->
-     <script type="module" src="../js/registro.js"></script>
 
      <!-- script para la verificacion de los campos  -->
      <script>
@@ -121,5 +121,9 @@
             });
         })();
      </script>
+     
+    <!-- script personal  -->
+    <script type="module" src="../js/registro.js"></script>
+
 </body>
 </html>

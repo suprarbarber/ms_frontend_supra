@@ -1,21 +1,18 @@
-export const registrar = async() => {
+const registrar = () => {
     const id = document.getElementById('id').value;
     const nombre = document.getElementById('nombre').value;
     const telefono = document.getElementById('telefono').value;
     const correo = document.getElementById('email').value;
     const contra = document.getElementById('contrasena').value;
     const roll = document.getElementById('disabledSelect').value;
-    const url = document.getElementById('url').value;
 
-
-    sessionStorage.setItem("urlsupra", url);
-    const urlsupra = sessionStorage.getItem('urlsupra') + "/api/registro"
-
-    console.log(urlsupra);
+    const url = sessionStorage.getItem('urlsupra');
+    console.log(url);
+    const endpoint = url + "/api/registro"
 
     const options = {
         method : 'POST',
-        Headers : {
+        headers : {
             'Content-Type' : 'application/json'
         },
         body : JSON.stringify({
@@ -28,12 +25,13 @@ export const registrar = async() => {
         })
     };
 
-    await fetch(urlsupra, options)
+    fetch(endpoint, options)
     .then(res => res.json())
     .then(data => {
         if(data.error == true){
             alertify.error('Error message');
         } else{
+            window.location.href = "/login"
            console.log("hola");
         }
     })
@@ -42,3 +40,6 @@ export const registrar = async() => {
     })
 }
 
+// const validarCampos = () => {
+//     return true;
+// }

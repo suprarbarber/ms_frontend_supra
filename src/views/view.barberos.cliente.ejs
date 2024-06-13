@@ -1,0 +1,73 @@
+<%- include('partials/headerhtml') %>
+    
+    <link rel="stylesheet" href="./css/barberos.cliente.reserva.css" />
+    <title>Reserva barberos</title>
+</head>
+
+<body>
+  <div class="main-container d-flex">
+    <!-- barra lateral  -->
+     <%- include('partials/sidebar') %>
+     
+    <div class="content">
+
+        <!-- barra de navegacion superior  -->
+        <%- include('partials/navbar.reserva.ejs') %>
+        <!-- fin barra superior  -->
+
+        <!-- contenido de la pagina  -->
+        <div class="container-fluid">
+             <div class="row">
+                <!-- barra de busqueda  -->
+                <nav class="navbar text-center my-5 p-0 center">
+        
+                    <form class="d-flex center" role="search" style="width: 80%;">
+        
+                        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                    </form>
+                </nav>
+            </div>
+            <!-- contenedor barberos  -->
+            <div class="row p-3">
+                <div class="col-md-3 col-lg-3">
+                    
+                    <div class="card bg-dark text-light center flex-direction-column py-4 " id="barber">
+                        <!-- imagen foto de perfil barbero  -->
+                        <img class="me-4 mb-2 rounded-circle" src="./img/barbero3.png" width="90px" height="90px">
+                        <!-- nombre del barbero  -->
+                        <h5 class="card-title ms-2">Hector Muñoz</h5>
+
+                    </div>
+                    <% datos.forEach(element => { %>
+                        <!-- imagen foto de perfil barbero  -->
+                        <img class="me-4 mb-2 rounded-circle" src="./img/barbero3.png" width="90px" height="90px">
+                        <!-- nombre del barbero  -->
+                        <h5 class="card-title ms-2"><%= element.nombre %></h5>
+
+                        <tr>
+                            <td><%= element.identificacion %></td>
+                        </tr>
+                        <tr>
+                             <td><%= element.nombre %></td>
+                        </tr>
+                           <td><%= element.telefono %></td>
+                        </tr>
+                        <tr>
+                            <td><%= element.correo_electronico %></td>
+                        </tr>
+                    <% }); %>
+                </div>
+            </div>
+
+        </div>
+            
+    </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.barra.lateral.js"></script>
+
+
+</body>
+</html>

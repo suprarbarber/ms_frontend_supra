@@ -19,6 +19,7 @@
                     <a class="navbar-brand d-none d-sm-block" href="./perfil" id="perfil">
                         <img src="img/usuario.png" width="35">
                     </a>
+                    <input type="hidden" id="usuario">
                 </li>
 
             </ul>
@@ -29,10 +30,35 @@
 
 <!-- validar token  -->
  <script>
-    const token = sessionStorage.getItem("token")
-    if(token == "" || token== null){
-        window.location.href = "./login"
-    }
- </script>
+    const usuario = document.getElementById("usuario").value;
 
- <input type="hidden" id="tpk" value="<%= tpk %>">
+    const token = sessionStorage.getItem("token")
+
+    if(token == "" || token == null){
+        window.location.href = "/login"
+    }
+    const url = sessionStorage.getItem("urlsupra") + "/api/oauth"
+    if(url == "" ||  url == null){
+        window.location.href = "/login"
+    }
+
+    const options = {
+        method : "POST",
+        headers : {
+            'Content-Type' : 'application/json',
+            'x-access-token' : token
+        }
+    }
+
+
+    fetch(url, options)
+    .then(res => res.json())
+    .then(data => {
+        if(data.error == true){
+            window.location.href = "/login"
+        }
+
+        // usuario.innerText = body.data.usuario
+    })
+
+ </script>
