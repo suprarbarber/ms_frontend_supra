@@ -4,7 +4,9 @@ const registrar = () => {
     const telefono = document.getElementById('telefono').value;
     const correo = document.getElementById('email').value;
     const contra = document.getElementById('contrasena').value;
-    const roll = "cliente";
+    const roll = document.querySelector('#roll').value;
+
+    // roll.addEventListener('change', )
 
     const url = sessionStorage.getItem('urlsupra');
     console.log(url);
@@ -28,11 +30,11 @@ const registrar = () => {
     fetch(endpoint, options)
     .then(res => res.json())
     .then(data => {
+        console.log(data);
         if(data.error == true){
-            alertify.error('Error message');
+            alertify.error('El usuario ya existe');
         } else{
             window.location.href = "/login"
-           console.log("hola");
         }
     })
     .catch(err => {
