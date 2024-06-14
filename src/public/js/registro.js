@@ -4,7 +4,7 @@ const registrar = () => {
     const telefono = document.getElementById('telefono').value;
     const correo = document.getElementById('email').value;
     const contra = document.getElementById('contrasena').value;
-    const roll = document.getElementById('disabledSelect').value;
+    const roll = "cliente";
 
     const url = sessionStorage.getItem('urlsupra');
     console.log(url);
@@ -40,6 +40,18 @@ const registrar = () => {
     })
 }
 
-// const validarCampos = () => {
-//     return true;
-// }
+// script para la verificacion de los campos 
+
+(function () {
+    'use strict';
+    var forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+})();
