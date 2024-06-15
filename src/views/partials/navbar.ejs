@@ -27,3 +27,23 @@
         </div>
     </div>
 </nav>
+
+<!-- validar token  -->
+<script>
+    const token = sessionStorage.getItem("token")
+
+    if(token == "" || token == null){
+        window.location.href = "/login"
+    }
+    const url = sessionStorage.getItem("urlsupra") + "/api/oauth"
+    if(url == "" ||  url == null){
+        window.location.href = "/login"
+    }
+
+    const options = {
+        method : "POST",
+        headers : {
+            'Content-Type' : 'application/json',
+            'x-access-token' : token
+        }
+    }

@@ -6,8 +6,6 @@ const registrar = () => {
     const contra = document.getElementById('contrasena').value;
     const roll = document.querySelector('#roll').value;
 
-    // roll.addEventListener('change', )
-
     const url = sessionStorage.getItem('urlsupra');
     console.log(url);
     const endpoint = url + "/api/registro"

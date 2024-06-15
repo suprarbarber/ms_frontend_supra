@@ -34,3 +34,7 @@ export const listarBarberos = (req, res) => {
 
 }
 
+export const splash = (req, res) => {
+    res.render('view.splash.ejs')
+}
+
