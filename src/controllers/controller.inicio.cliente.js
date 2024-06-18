@@ -31,10 +31,17 @@ export const listarBarberos = (req, res) => {
         datos = data.body;
         res.render("view.barberos.cliente.ejs", {datos : datos});
     })
-
 }
 
 export const splash = (req, res) => {
-    res.render('view.splash.ejs')
+    // let datos = "";
+    // const recurso = url + "/api/clientes"
+    // fetch(recurso)
+    // .then(res => res.json())
+    // .then(data => {
+    //     datos = data.body;
+    //     res.render('view.splash.ejs', {datos})
+    // })
+
 }
 

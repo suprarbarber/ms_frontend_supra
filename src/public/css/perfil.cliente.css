@@ -23,12 +23,12 @@
 
 .imagen-pefil{
     position: relative;
-    top: 10px;
+    top: 20px;
 }
 
 #datos{
     background: #8FBCE9;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
 }
 
@@ -40,6 +40,9 @@
     height: 80px;
     display: flex;
     align-items: center;
+}
+a{
+    color: black;
 }
 
 

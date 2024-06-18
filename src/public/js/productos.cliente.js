@@ -6,5 +6,4 @@ document.getElementById('#btn-agregar').addEventListener("click", function() {
         showConfirmButton: false,
         timer: 1500
       });
-
 })

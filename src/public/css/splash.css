@@ -1,37 +1,41 @@
-/* splas screen  */
-.intro{
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+/* importacion de Lilita One  */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+
+body{
     width: 100%;
     height: 100vh;
-    background-color: #010c49;
-    transition: 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lilita One', sans-serif;
+    font-weight: 700;
+    background-color: #111;
 }
 
- .logo-header{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-}
- .logo{
+h2 {
     position: relative;
-    display: inline-block;
-    bottom: -20px;
-    opacity: 0;
-} 
- 
-.logo.active{
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
+    font-size: 3rem;
+    color: #222;
 }
 
-.logo.fade {
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
+h2::before {
+    content: attr(data-text);
+    position: absolute;
+    color: #fff;
+    width: 320px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    animation: animate 8s  linear infinite;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.58);
+}
+
+@keyframes animate {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 100%;
+    }
 }

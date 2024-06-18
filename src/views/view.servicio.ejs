@@ -1,6 +1,6 @@
 <%- include('partials/headerhtml') %>
     
-    <link rel="stylesheet" href="./css/producto.cliente.css" />
+    <link rel="stylesheet" href="./css/servicio.cliente.css" />
     <title>Productos</title>
 </head>
 
@@ -16,21 +16,11 @@
         <!-- fin barra superior  -->
 
         <!-- contenido de la pagina  -->
-        <div class="container-fluid">
-             <div class="row">
-                <!-- barra de busqueda  -->
-                <nav class="navbar text-center my-5 p-0 center">
-        
-                    <form class="d-flex center" role="search" style="width: 80%;">
-        
-                        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
-                    </form>
-                </nav>
-            </div>
+        <div class="container-fluid" style="background: url(../img/fondo_servicios.png);">
+
             <!-- contenedor productos  -->
             <div class="row p-3">
                 <div class="col-12 d-flex flex-wrap justify-content-center" id="contenedorscrol">
-                    
                     <% datos.forEach(element => { %>
                         <div class="card text-center my-4 mx-2" id="tarjeta" style="width: 250px;">
                             <!-- imagen  -->
@@ -64,7 +54,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/script.barra.lateral.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/productos.cliente.js"></script>
+    <script src="./js/productos.cliente.js"></script>
 
 
 </body>

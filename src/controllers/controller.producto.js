@@ -15,10 +15,9 @@ const producto = (req, res ) => {
     fetch(recurso)
     .then(res => res.json())
     .then(data => {
-        // console.log(data.body[0]);
-        datos = data.body[0]
-
-        res.render('view.producto.cliente.ejs', {datos});
+        console.log(data.body);
+        datos = data.body;
+        res.render('view.producto.cliente.ejs', {datos : datos});
     })
 
 };
