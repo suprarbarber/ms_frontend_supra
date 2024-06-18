@@ -4,23 +4,22 @@ config();
 const url = process.env.BACKEND_URL;
 
 /**
- * Esta funcion es para mostrar los productos
+ * Esta funcion es para mostrar lo servicios
  * @param {object} req peticion
  * @param {object} res respuesta
  */
-const producto = (req, res ) => {
+const servicio = (req, res ) => {
     let datos = "";
-    const recurso = url + "/api/producto"
+    const recurso = url + "/api/servicio"
 
     fetch(recurso)
     .then(res => res.json())
     .then(data => {
-        console.log(data.body);
+        // console.log(data.body);
         datos = data.body;
-        res.render('view.producto.cliente.ejs', {datos : datos});
+        res.render('view.servicio.cliente.ejs', {datos : datos});
     })
 
 };
 
-export { producto }
-
+export { servicio }

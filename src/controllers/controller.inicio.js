@@ -1,16 +1,20 @@
 import { config } from "dotenv";
 config();
 /**
- * Vista de inicio de la pagina
+ * Esta funcion es para la vista inicial de la pagina
  * @param {object} req peticion
  * @param {object} res respuesta
  */
-
 const inicio = (req, res ) => {
 
     res.render('view.inicio.ejs');
 };
 
+/**
+ * Esta funcion es para la vista de iniciar sesion
+ * @param {object} req peticion
+ * @param {object} res respuesta
+ */
 const login = (req, res ) => {
     // se trae la variable url del .env 
     const url = process.env.BACKEND_URL;
@@ -20,6 +24,11 @@ const login = (req, res ) => {
     res.render('view.login.ejs', options);
 };
 
+/**
+ * Esta funcion es para la vista inicial del registro
+ * @param {object} req peticion
+ * @param {object} res respuesta
+ */
 const registro = (req, res ) => {
     // se trae la variable url del .env 
     const url = process.env.BACKEND_URL;
