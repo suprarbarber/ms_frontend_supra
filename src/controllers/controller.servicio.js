@@ -9,12 +9,6 @@ const url = process.env.BACKEND_URL;
  * @param {object} res respuesta
  */
 const servicio = (req, res ) => {
-
-    // // se trae la variable url del .env 
-    // const url = process.env.BACKEND_URL;
-
-    // const options = {url: url};
-
     let datos = "";
     const recurso = url + "/api/servicio"
 

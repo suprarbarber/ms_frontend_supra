@@ -20,6 +20,5 @@ const producto = (req, res ) => {
     })
 
 };
-
 export { producto }
 
