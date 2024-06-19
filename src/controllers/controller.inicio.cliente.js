@@ -18,10 +18,6 @@ const url = process.env.BACKEND_URL;
     res.render('view.baberos.cliente.reserva.ejs')
 }
 
- const perfilCliente = (req, res) => {
-    res.render('view.perfil.cliente.ejs')
-}
-
  const ayuda = (req, res) => {
     res.render('view.ayuda.cliente.ejs')
 }
@@ -49,5 +45,5 @@ const url = process.env.BACKEND_URL;
 
 }
 
-export { inicioCliente, reservar, perfilCliente, ayuda, listarBarberos, splash}
+export { inicioCliente, reservar, ayuda, listarBarberos, splash}
 

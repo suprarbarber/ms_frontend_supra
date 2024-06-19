@@ -1,15 +1,18 @@
 import { Router } from "express"
-import { ayuda, inicioCliente, listarBarberos, perfilCliente, reservar, splash } from "../controllers/controller.inicio.cliente";
+import { ayuda, inicioCliente, listarBarberos, reservar, splash } from "../controllers/controller.inicio.cliente";
 import { producto } from "../controllers/controller.producto";
 import { servicio } from "../controllers/controller.servico";
 import { corte1 } from "../controllers/controller.corte";
+import { perfilCliente } from "../controllers/controller.cliente";
 
 
 const rutaInicioCliente = Router();
 
 rutaInicioCliente.get("/inicio", inicioCliente)
 rutaInicioCliente.get("/reserva", reservar)
+
 rutaInicioCliente.get("/perfil", perfilCliente)
+
 rutaInicioCliente.get("/ayuda", ayuda)
 rutaInicioCliente.get("/barberos", listarBarberos)
 rutaInicioCliente.get("/producto", producto)

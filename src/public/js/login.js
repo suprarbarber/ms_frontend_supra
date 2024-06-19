@@ -25,8 +25,11 @@ const loguin = async() => {
         if(data.error == true){
             alertify.error('Contraseña errada');
         }else{
+            console.log(data.body);
             sessionStorage.setItem("token", data.body.token)
-            window.location.href = "./splash"                                                    
+            sessionStorage.setItem("id", data.body.id)
+            
+            // window.location.href = "./splash"                                    
         }
     })
     .catch(err => {

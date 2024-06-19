@@ -20,8 +20,7 @@
             <div class="row">
                 <div class="col-md-12 center" id="cuerpo">
                     <% datos.forEach(element => { %>
-                        <button type="button" class="btn btn-outline-success fs-5 btn-servicio mx-2 my-3"><%= element.nombre %></button>
-                        <imput type="hidden"><%= element %>
+                        <button type="button" class="btn btn-outline-success fs-5 btn-servicio mx-2 my-3"><a class="corte" href="./corte1"><%= element.nombre %> </a></button>
                     <% }); %>
                 </div>
             </div>
