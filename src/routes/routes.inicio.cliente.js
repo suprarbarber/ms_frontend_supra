@@ -1,7 +1,7 @@
 import { Router } from "express"
 import { ayuda, inicioCliente, listarBarberos, reservar, splash } from "../controllers/controller.inicio.cliente";
 import { producto } from "../controllers/controller.producto";
-import { servicio } from "../controllers/controller.servico";
+import { servicio } from "../controllers/controller.servicio";
 import { corte1 } from "../controllers/controller.corte";
 import { perfilCliente } from "../controllers/controller.cliente";
 

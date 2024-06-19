@@ -18,18 +18,20 @@ const loguin = async() => {
             contrasena : contra
         })
     };
+    
     console.log(urlsupra);
     await fetch(urlsupra, options)
     .then(res => res.json())
     .then(data => {
         if(data.error == true){
+            
             alertify.error('Contraseña errada');
         }else{
             console.log(data.body);
             sessionStorage.setItem("token", data.body.token)
             sessionStorage.setItem("id", data.body.id)
             
-            // window.location.href = "./splash"                                    
+            window.location.href = "./splash"                       
         }
     })
     .catch(err => {

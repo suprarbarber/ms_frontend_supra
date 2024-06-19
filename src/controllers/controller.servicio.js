@@ -9,15 +9,20 @@ const url = process.env.BACKEND_URL;
  * @param {object} res respuesta
  */
 const servicio = (req, res ) => {
+
+    // // se trae la variable url del .env 
+    // const url = process.env.BACKEND_URL;
+
+    // const options = {url: url};
+
     let datos = "";
     const recurso = url + "/api/servicio"
 
     fetch(recurso)
     .then(res => res.json())
     .then(data => {
-        // console.log(data.body);
         datos = data.body;
-        res.render('view.servicio.cliente.ejs', {datos : datos});
+        res.render('view.servicio.cliente.ejs',{datos : datos});
     })
 
 };
