@@ -1,9 +1,10 @@
-document.getElementById('#btn-agregar').addEventListener("click", function() {
-    Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Your work has been saved",
-        showConfirmButton: false,
-        timer: 1500
-      });
-})
+const alerta = (event) => {
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Ha sido agregrado al carrito",
+    showConfirmButton: false,
+    timer: 1500
+  });
+  
+}
