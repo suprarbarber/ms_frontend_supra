@@ -30,7 +30,7 @@ const registrar = () => {
     .then(data => {
         console.log(data);
         if(data.error == true){
-            alertify.error('El usuario ya existe');
+            alertify.error('Algo está errado');
         } else{
             window.location.href = "/login"
         }
@@ -40,7 +40,7 @@ const registrar = () => {
     })
 }
 
-// script para la verificacion de los campos 
+// script para la verificacion de los campos
 
 (function () {
     'use strict';

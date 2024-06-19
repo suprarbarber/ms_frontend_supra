@@ -28,32 +28,31 @@
                 <h1 class="text-light mt-3" id="title"><a href="./">Supra Barber</a></h1>
 
                 <div class="col-md-12 d-flex align-items-center justify-content-center" id="caja">
-                    <!-- border degradado  -->
-                    <div class="borde d-flex align-items-center justify-content-center">
-                        <div class="container py-4" style="background-color: rgb(192, 187, 187);"  id="contenedor">
-                            <!-- imagen usuario  -->
-                            <div class="caja-img text-center">
-                                <img src="img/usuario.png" class="mb-3 text-center" style="width: 70px; height: 70px;">
-                            </div>
-                            <!-- formulario de ingreso  -->
-                            <form>
-                                <input class="form-control mb-3" id="email" type="text" placeholder="Correo Electronico">
-                                <input class="form-control mb-3" id="contrasena" type="password" placeholder="Contraseña">
-                            </form>
-                            <div class="d-grid gap-2">
-                                <input type="hidden" id="url" value="<%= url %>">
-                                <!-- boton iniciar sesion  -->
-                                <button class="btn text-light" type="submit" id="btn-login" onclick="loguin()">Iniciar Sesión</button>
-                                <!-- link registrase  -->
-                                <p class=" d-flex align-items-center justify-content-center">¿No tienes cuenta?<a href="./registro" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Registrate</a></p>
-                            </div>
+                    <div class="container py-4" style="background-color: rgb(192, 187, 187);"  id="contenedor">
+                        <!-- imagen usuario  -->
+                        <div class="caja-img text-center">
+                            <img src="img/usuario.png" class="mb-3 text-center" style="width: 70px; height: 70px;">
+                        </div>
+                        <!-- formulario de ingreso  -->
+                        <form>
+                            <input class="form-control mb-3" id="email" type="text" placeholder="Correo Electronico">
+                            <input class="form-control mb-3" id="contrasena" type="password" placeholder="Contraseña">
+                        </form>
+                        <div class="d-grid gap-2">
+                            <input type="hidden" id="url" value="<%= url %>">
+                            <!-- boton iniciar sesion  -->
+                            <button class="btn text-light" type="submit" id="btn-login" onclick="loguin()">Iniciar Sesión</button>
+                            <!-- link registrase  -->
+                            <p class=" d-flex align-items-center justify-content-center">¿No tienes cuenta?<a href="./registro" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Registrate</a></p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- contenedor imagen  -->
-            <div class="col-md-6 col-lg-7 d-sm-block d-none" id="img"></div>
+            <div class="col-md-6 col-lg-7 d-sm-block d-none" id="img">
+                <h4 class="text-light">Todas tus citas en un solo lugar.|</h4>
+            </div>
         </div>
         </div>
 
