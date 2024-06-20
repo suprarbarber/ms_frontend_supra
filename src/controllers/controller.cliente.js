@@ -10,7 +10,7 @@ const url = process.env.BACKEND_URL;
  */
 const perfilCliente = (req, res ) => {
     let datos = "";
-    const recurso = url + "/api/cliente"
+    const recurso = url + "/api/clientes"
 
     fetch(recurso)
     .then(res => res.json())
