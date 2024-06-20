@@ -9,16 +9,8 @@ const url = process.env.BACKEND_URL;
  * @param {object} res respuesta
  */
 const corte1 = (req, res ) => {
-    let datos = "";
-    const recurso = url + "/api/corte"
-
-    fetch(recurso)
-    .then(res => res.json())
-    .then(data => {
-        datos = data.body;
-        res.render('view.cortes.servicio1.ejs', {datos : datos});
-    })
-
+    res.render('view.cortes.servicio1.ejs');
+    
 };
 
 export { corte1 };

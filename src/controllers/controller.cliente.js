@@ -15,12 +15,11 @@ const perfilCliente = (req, res ) => {
     fetch(recurso)
     .then(res => res.json())
     .then(data => {
-        console.log(data.body);
+        // console.log(data.body);
         datos = data.body;
         res.render('view.perfil.cliente.ejs', {datos : datos});
     })
 
 };
-
 
 export { perfilCliente }

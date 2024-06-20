@@ -7,8 +7,8 @@
 <body>
   <div class="main-container d-flex">
     <!-- barra lateral  -->
-     <%- include('partials/sidebar') %>
-     
+    <%- include('partials/sidebar') %>
+    
     <div class="content">
 
       <!-- barra de navegacion superior  -->
@@ -16,76 +16,69 @@
       <!-- fin barra superior  -->
 
       <!-- contenido de la pagina  -->
-        
-        <div class="content-body text-center center pt-0" style="width: 100%; height: 84%;" id="contenidos">
+      <div class="content-body text-center center pt-0" style="width: 100%; height: 84%;" id="contenidos">
             
-            <img src="img/usuario.png" class="imagen-pefil" width="100px">
+        <img src="img/usuario.png" class="imagen-pefil" width="100px">
 
-            <div class="container-fluid " id="caja">
+        <div class="container-fluid " id="caja">
 
-                <!-- cuadro azul  -->
-                <div class="caja border rounded center" id="datos">
+          <!-- cuadro azul  -->
+          <div class="caja border rounded center" id="datos">
 
-                    <!-- tabla de datos  -->
+            <!-- tabla de datos  -->
+            <div class="list-group" id="list-group">
+              <% datosforEach(element => { %>
+                        
+                <!-- campo nombre  -->
+                <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
+                  <div id="titu" class="d-flex flex-column">Nombre de usuario<br>              
+                    <p class="fs-5 text-dark">Hector Muñoz de la Peña</p>
+                  </div>
+                  <!-- boton modificar  -->
+                  <div id="edit">
+                    <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
+                  </div>            
+                </button>
 
-                    <div class="list-group" id="list-group">
-                        <!-- campo nombre  -->
-                        <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
+                <!-- campo id  -->
+                <button type="button" class="list-group-item list-group-item-action d-flex justify-content-start flex-column" disabled>Identificación<br>
+                  <p class="fs-5">1020405548</p>
+                </button>
 
-                            <div id="titu" class="d-flex flex-column">Nombre de usuario<br>
-                                
-                                <p class="fs-5 text-dark">Hector Muñoz de la Peña</p>
-                            </div>
-                            
-                            <div id="edit">
-                                <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
-                            </div>
-
-                        </button>
-                        <!-- campo id  -->
-                        <button type="button" class="list-group-item list-group-item-action d-flex justify-content-start flex-column" disabled>Identificación<br>
-                            <p class="fs-5">1020405548</p>
-                        </button>
-
-
-                        <!-- campo Correo  -->
-                        <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
-
-                            <div id="titu" class="d-flex flex-column">Correo electronico<br>
-                                <p class="fs-5 text-dark">hector@gmail.com</p>
-                                </div>
-                            <div id="edit">
-                                <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
-                            </div>
-                            
-                        </button>
-
-                        <!-- telefono  -->
-                        <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between" id="op">
-
-                            <div id="titu" class="d-flex flex-column">Telefono<br>
-                                <p class="fs-5 text-dark">3157316581</p>
-                                </div>
-                            <div id="edit">
-                                <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
-                            </div>
-                            
-                        </button>
-
-                        <!-- Contraseña  -->
-                        <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
-
-                            <div id="titu" class="d-flex flex-column">Contraseña<br>
-                                <p class="fs-5 text-dark">Pe*******</p>
-                            </div>
-                            <div id="edit">
-                                <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
-                            </div>
-                            
-                        </button>
-                    </div>
-                </div>
-            </div>
+                <!-- campo Correo  -->
+                <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
+                  <div id="titu" class="d-flex flex-column">Correo electronico<br>
+                    <p class="fs-5 text-dark">hector@gmail.com</p>
+                  </div>
+                  <!-- boton modificar  -->
+                  <div id="edit">
+                      <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
+                  </div>
+                </button>
+                        
+                <!-- telefono  -->
+                <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between" id="op">
+                  <div id="titu" class="d-flex flex-column">Telefono<br>
+                    <p class="fs-5 text-dark">3157316581</p>
+                  </div>
+                  <div id="edit">
+                    <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
+                  </div>
+                </button>
+                        
+                <!-- Contraseña  -->
+                <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
+                  <div id="titu" class="d-flex flex-column">Contraseña<br>
+                      <p class="fs-5 text-dark">Pe*******</p>
+                  </div>
+                  <!-- boton modificar  -->
+                  <div id="edit">
+                    <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
+                  </div>
+                </button>
+              </div>
+            <% }); %>
+          </div>
         </div>
                 
         <!-- Boton para eliminar la cuenta del cliente  -->

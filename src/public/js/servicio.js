@@ -3,15 +3,19 @@ const rutaCorte = (servicioId) => {
 
 
     if(btn_servicio == 1 ){
+        sessionStorage.setItem("servicio", btn_servicio)
         window.location.href = "./corte1"
     }
+    
     if(btn_servicio == 2){
-        window.location.href = "./perfil"
+        sessionStorage.setItem("servicio", btn_servicio)
+        // window.location.href = "./perfil"
     }
     
     if(btn_servicio == 3){
-        window.location.href = "./producto"
+        sessionStorage.setItem("servicio", btn_servicio)
+        // window.location.href = "./producto"
+        
     }
-
 
 }

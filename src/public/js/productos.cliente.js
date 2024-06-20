@@ -8,3 +8,10 @@ const alerta = (event) => {
   });
   
 }
+
+const reporte = (event) => {
+  const reporte = new jsPDF();
+
+  reporte.text(10,10, "Este es mi reporte")
+  reporte.save("Reporte productos");
+}
