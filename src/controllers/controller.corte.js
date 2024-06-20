@@ -9,8 +9,7 @@ const url = process.env.BACKEND_URL;
  * @param {object} res respuesta
  */
 const corte1 = (req, res ) => {
-    res.render('view.cortes.servicio1.ejs');
-    
+    res.render('view.cortes.ejs');
 };
 
 export { corte1 };

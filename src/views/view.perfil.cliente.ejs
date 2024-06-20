@@ -27,12 +27,11 @@
 
             <!-- tabla de datos  -->
             <div class="list-group" id="list-group">
-              <% datosforEach(element => { %>
                         
                 <!-- campo nombre  -->
                 <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
-                  <div id="titu" class="d-flex flex-column">Nombre de usuario<br>              
-                    <p class="fs-5 text-dark">Hector Muñoz de la Peña</p>
+                  <div id="titu" class="d-flex flex-column">Nombre de usuario<br>             
+                    <p id="nombre" class="fs-5 text-dark"></p>
                   </div>
                   <!-- boton modificar  -->
                   <div id="edit">
@@ -42,13 +41,13 @@
 
                 <!-- campo id  -->
                 <button type="button" class="list-group-item list-group-item-action d-flex justify-content-start flex-column" disabled>Identificación<br>
-                  <p class="fs-5">1020405548</p>
+                  <p id="id" class="fs-5"></p>
                 </button>
 
                 <!-- campo Correo  -->
                 <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
                   <div id="titu" class="d-flex flex-column">Correo electronico<br>
-                    <p class="fs-5 text-dark">hector@gmail.com</p>
+                    <p id="correo" class="fs-5 text-dark"></p>
                   </div>
                   <!-- boton modificar  -->
                   <div id="edit">
@@ -59,25 +58,13 @@
                 <!-- telefono  -->
                 <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between" id="op">
                   <div id="titu" class="d-flex flex-column">Telefono<br>
-                    <p class="fs-5 text-dark">3157316581</p>
+                    <p id="telefono" class="fs-5 text-dark"></p>
                   </div>
-                  <div id="edit">
-                    <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
-                  </div>
-                </button>
-                        
-                <!-- Contraseña  -->
-                <button type="button" class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
-                  <div id="titu" class="d-flex flex-column">Contraseña<br>
-                      <p class="fs-5 text-dark">Pe*******</p>
-                  </div>
-                  <!-- boton modificar  -->
                   <div id="edit">
                     <div onclick="modificar(event)" type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Editar</div>
                   </div>
                 </button>
               </div>
-            <% }); %>
           </div>
         </div>
                 

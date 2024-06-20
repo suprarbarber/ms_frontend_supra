@@ -9,17 +9,7 @@ const url = process.env.BACKEND_URL;
  * @param {object} res respuesta
  */
 const perfilCliente = (req, res ) => {
-    let datos = "";
-    const recurso = url + "/api/clientes"
-
-    fetch(recurso)
-    .then(res => res.json())
-    .then(data => {
-        // console.log(data.body);
-        datos = data.body;
-        res.render('view.perfil.cliente.ejs', {datos : datos});
-    })
-
+    res.render('view.perfil.cliente.ejs');
 };
 
 export { perfilCliente }

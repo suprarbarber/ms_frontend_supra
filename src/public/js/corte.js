@@ -4,7 +4,7 @@
 // });
 const mostrarCortes = async() => {
     const servicio = sessionStorage.getItem('servicio');
-    const endpoint = sessionStorage.getItem('urlsupra') + "/api/corte"
+    const endpoint = sessionStorage.getItem('urlsupra') + "/api/corte";
 
     console.log(endpoint);
 
@@ -18,13 +18,13 @@ const mostrarCortes = async() => {
         })
     };
     
-    let datos = "";
-
+    
     await fetch(endpoint, options)
     .then(res => res.json())
     .then(data => {
+        let datos = "";
         datos = data.body
-        // console.log(data.body);
+        console.log(data.body);
     })
     .catch(err => {
         console.log("Tenemos un problema", err);
