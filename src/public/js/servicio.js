@@ -1,21 +1,22 @@
-const rutaCorte = (servicioId) => {
+const rutaCorte = async(servicioId) => {
     const btn_servicio =  (`${servicioId}`);
 
+    const endpoint = sessionStorage.getItem('urlsupra') + "/api/corte?id=" + btn_servicio;
+    
+    try {
 
-    if(btn_servicio == 1 ){
-        sessionStorage.setItem("servicio", btn_servicio)
-        window.location.href = "./corte1"
-    }
-    
-    if(btn_servicio == 2){
-        sessionStorage.setItem("servicio", btn_servicio)
-        // window.location.href = "./perfil"
-    }
-    
-    if(btn_servicio == 3){
-        sessionStorage.setItem("servicio", btn_servicio)
-        // window.location.href = "./producto"
+        const respuesta = await fetch(endpoint);
+        const data = await respuesta.json()
         
+        if(data.body && data.body.length > 0){
+            sessionStorage.setItem('corteData', JSON.stringify(data.body))
+            window.location.href = "./corte"
+        }else{
+            console.log("No se encontraron los datos");
+        }
+
+    } catch (error) {
+        console.log("Tenemos un problema", error);
     }
 
 }

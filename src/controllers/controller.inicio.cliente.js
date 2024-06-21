@@ -15,7 +15,7 @@ const url = process.env.BACKEND_URL;
 }
 
  const reservar = (req, res) => {
-    res.render('view.baberos.cliente.reserva.ejs')
+    res.render('view.reserva.barberos.ejs')
 }
 
  const ayuda = (req, res) => {

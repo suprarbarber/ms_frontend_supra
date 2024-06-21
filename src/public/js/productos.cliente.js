@@ -11,7 +11,7 @@ const alerta = (event) => {
 
 const reporte = (event) => {
   const reporte = new jsPDF();
-  const nombre = event.target.parentElement.parentElement.parentElement;
+  const nombre = event.target.parentElement.parentElement.parentElement.children[1].producto;
   console.log(nombre);
   let fila = 10;
   let pageWidth = reporte.internal.pageSize.width;
@@ -19,9 +19,9 @@ const reporte = (event) => {
 
   reporte.line(10,10, pageWidth - 10, 10)
   reporte.text(10,fila, "Este es mi reporte")
-  // reporte.text(10,20, `Hola mi productos favorito: ${nombre}`);
+  reporte.text(10,fila+=10, `Hola mi productos favorito: ${nombre}`);
   reporte.text(10,fila+=10, "Este es mi reporte")
   reporte.text(10,fila+=10, "Este es mi reporte")
   reporte.text(10,fila+=10, `Fecha: ${fecha}`)
-  // reporte.save("Reporte productos");
+  reporte.save("Reporte productos");
 }

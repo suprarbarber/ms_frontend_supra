@@ -8,8 +8,8 @@ const url = process.env.BACKEND_URL;
  * @param {object} req peticion
  * @param {object} res respuesta
  */
-const corte1 = (req, res ) => {
+const corte = (req, res ) => {
     res.render('view.cortes.ejs');
 };
 
-export { corte1 };
+export { corte };
