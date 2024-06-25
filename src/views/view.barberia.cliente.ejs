@@ -1,0 +1,58 @@
+<%- include('partials/headerhtml') %>
+    
+    <link rel="stylesheet" href="./css/barberia.css" />
+    <title>Barbería</title>
+</head>
+
+<body>
+  <div class="main-container d-flex">
+    <!-- barra lateral  -->
+     <%- include('partials/sidebar') %>
+     
+    <div class="content bg-light">
+
+        <!-- barra de navegacion superior  -->
+        <%- include('partials/navbar.ejs') %>
+        <!-- fin barra superior  -->
+
+        <!-- contenido de la pagina  -->
+        <div class="container-fluid center">
+            <div class="row contenido">
+                <div class="col-md-4 col-lg-4 col-sm-12 mt-4 parte0 pt-3" id="cuerpo">
+                    <img src="../img/mapa.png" width="300px" class="my-3">
+                    <div class="direccion p-2 mt-3 rounded">
+                        <h6>Supra Barber</h5>
+                        Cll 45 #56A-11<br>
+                        Local 308
+                    </div>
+                </div>
+                <div class="col-md-7 col-lg-5 col-sm-12 center parte1 mt-4 ">
+                    <div class="texto mb-3 mt-2">
+                        ¡Bienvenido a Supra Barber! <br>Somos una barbería moderna y acogedora<br> 
+                        que ofrece cortes de cabello, afeitados impecables y tratamientos de barba. 
+                        Nuestro equipo de barberos expertos se esfuerza por brindar una experiencia 
+                        excepcional en un ambiente masculino y relajante.  ¡Reserve su cita hoy 
+                        mismo y descubra la excelencia en el arte de la con nosotros!
+                    </div>
+                    <div class="cajita rounded p-2 pt-4 px-4">
+                        <h4 class="text-success">Horarios</h4>
+                        Lunes a Sábado<br>
+                        08:00am A 12:00am y 01:00pm A 07:00pm<br>
+                        Festivos<br>
+                        10:00am A 12:00am y 01:00pm A 04:00pm 
+                    </div>
+                </div>
+                <div class="col-md-1 col-lg-3 col-sm-12 mt-4 parte2">
+                    <img src="./img/iconopen.png" width="120px">
+                </div>
+            </div>
+        </div>
+            
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.barra.lateral.js"></script>
+    <!-- <script src="../js/servicio.js"></script> -->
+</body>
+</html>

@@ -1,18 +1,11 @@
-/* Importacion de la fuente Bona nova  */
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
-
-/* Inportacion de la fuente goudy bookletter  */
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Coiny&family=Goudy+Bookletter+1911&family=Itim&display=swap');
-
-/* Importacion de la fuente itim  */
-@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Coiny&family=Itim&display=swap');
-
-
 
 @media(max-width: 767px){
 
 #datos{
-    padding-right: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 }

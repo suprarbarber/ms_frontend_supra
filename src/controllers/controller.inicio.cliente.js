@@ -24,7 +24,7 @@ const url = process.env.BACKEND_URL;
 
  const listarBarberos = (req, res) => {
     let datos = "";
-    const recurso = url + "/api/clientes"
+    const recurso = url + "/api/cliente"
     fetch(recurso)
     .then(res => res.json())
     .then(data => {
@@ -34,15 +34,7 @@ const url = process.env.BACKEND_URL;
 }
 
  const splash = (req, res) => {
-    let datos = "";
-    const recurso = url + "/api/clientes"
-    fetch(recurso)
-    .then(res => res.json())
-    .then(data => {
-        datos = data.body;
-        res.render('view.splash.ejs', {datos})
-    })
-
+    res.render('view.splash.ejs')
 }
 
 export { inicioCliente, reservar, ayuda, listarBarberos, splash}

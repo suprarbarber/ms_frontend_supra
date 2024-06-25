@@ -1,17 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // console.log('La página de perfil se ha cargado');
     
-    const mainCuerpo = document.getElementById('mainCuerpo');
+    cuerpo = document.getElementById('cuerpo');
     const corteData = JSON.parse(sessionStorage.getItem('corteData'));
 
-    if(corteData && corteData.lenght > 0){
-        
+    if(corteData && corteData.length > 0){
+        console.log("holi");
         corteData.forEach(item => {
-
-            const cuerpo = document.createElement('div');
-            cuerpo.className = 'col-md-12';
-            cuerpo.id = 'cuerpo';
-
             const corte = document.createElement('div');
             corte.className = 'btn text-light text-center mx-2 my-2';
             corte.id = 'corte';
@@ -33,9 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
             corte.appendChild(imagen)
             corte.appendChild(nombreCorte)
             cuerpo.appendChild(corte)
-            mainCuerpo.appendChild(cuerpo)
+        }
 
-        })
+    )}else{
+        console.log("freddy");
     }
 
 });

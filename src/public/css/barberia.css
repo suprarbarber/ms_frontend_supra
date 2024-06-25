@@ -1,0 +1,39 @@
+/* Inportacion de la fuente goudy bookletter  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+.contenido{
+    width: 100%;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+.direccion{
+    width: 250px;
+    height: 100px;
+    border: 1px black solid;
+}
+
+.parte1{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto{
+    width: 350px;
+    font-size: 13.5px;
+}
+.cajita{
+    width: 390px;
+    height: 200px;
+    background-color: #DEDEDE;
+    margin-top: 50px;
+}
+
+.parte2{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -3,7 +3,6 @@ const loguin = async() => {
     const contra = document.getElementById('contrasena').value;
     const url = document.getElementById('url').value;
 
-
     sessionStorage.setItem("urlsupra", url);
     const urlsupra = sessionStorage.getItem('urlsupra') + "/api/login"
 

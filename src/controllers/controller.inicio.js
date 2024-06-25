@@ -32,7 +32,6 @@ const login = (req, res ) => {
 const registro = (req, res ) => {
     // se trae la variable url del .env 
     const url = process.env.BACKEND_URL;
-    
 
     const options = {url: url};
     
