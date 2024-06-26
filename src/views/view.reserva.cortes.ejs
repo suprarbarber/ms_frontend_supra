@@ -1,0 +1,53 @@
+<%- include('partials/headerhtml') %>
+    
+    <link rel="stylesheet" href="./css/reserva.corte.css" />
+    <title>Reserva Cortes</title>
+</head>
+
+<body>
+  <div class="main-container d-flex">
+    <!-- barra lateral  -->
+     <%- include('partials/sidebar') %>
+     
+    <div class="content">
+
+        <!-- barra de navegacion superior  -->
+        <%- include('partials/navbar.ejs') %>
+        <!-- fin barra superior  -->
+
+        <!-- contenido de la pagina  -->
+        <div class="container-fluid center" id="content">
+            <div class="row">
+                <div class="col-12 mt-2 mb-3">
+                    <!-- barra de busqueda  -->
+                    <nav class="navbar text-center my-5 p-0 center">
+            
+                        <form class="d-flex center" role="search" style="width: 80%;">
+                            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                        </form>
+                    </nav>
+                </div>
+
+                <div class="col-12 text-center mb-4">
+                    <div class="col-12 my-2 mx-2" id="cuerpo"></div>
+                </div>
+
+                <div class="col-12 mt-4">
+                    <button onclick="siguientePaso();" class="btn fs-5 text-light" id="btn-siguiente">
+                        Siguiente
+                    </button>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- script propio de ña barra lateral  -->
+    <script src="./js/script.barra.lateral.js"></script>
+    <!-- script propio -->
+    <script src="./js/reserva.corte.js"></script>
+</body>
+</html>

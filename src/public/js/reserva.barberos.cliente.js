@@ -5,6 +5,7 @@ const escogerBarbero = (id_barbero) => {
     console.log(idBarbero);
 }
 
+// lo que hace despues de dar click en el boton de siguiente 
 const siguientePaso = () => {
     const id_barber = sessionStorage.getItem('id_barbero')
     
@@ -27,6 +28,6 @@ const siguientePaso = () => {
         appendAlert('No has seleccionado ningun barbero!', 'danger')
     }
      else {
-        window.location.href = "./servicio"
+        window.location.href = "./reserva-servicio"
     }
 }
