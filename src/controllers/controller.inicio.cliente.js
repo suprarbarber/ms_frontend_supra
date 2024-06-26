@@ -15,7 +15,14 @@ const url = process.env.BACKEND_URL;
 }
 
  const reservar = (req, res) => {
-    res.render('view.reserva.barberos.ejs')
+    let datos = "";
+    const recurso = url + "/api/barbero"
+    fetch(recurso)
+    .then(res => res.json())
+    .then(data => {
+        datos = data.body;
+        res.render('view.reserva.barberos.ejs', {datos : datos})
+    })
 }
 
  const ayuda = (req, res) => {
@@ -24,7 +31,7 @@ const url = process.env.BACKEND_URL;
 
  const listarBarberos = (req, res) => {
     let datos = "";
-    const recurso = url + "/api/cliente"
+    const recurso = url + "/api/barbero"
     fetch(recurso)
     .then(res => res.json())
     .then(data => {

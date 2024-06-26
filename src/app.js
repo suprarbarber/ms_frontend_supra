@@ -18,4 +18,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use("/", ruta)
 
+//error 404
+app.use("/", (req, res) =>{
+    res.render("views.error404.ejs")
+})
 export default app;

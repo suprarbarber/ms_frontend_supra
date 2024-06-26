@@ -90,9 +90,7 @@
     </ul>
     <script>
         const cerrarSesion = () => {
-            sessionStorage.setItem("token", "")
-            sessionStorage.setItem("urlsupra", "")
-            sessionStorage.setItem("id", "")
+            sessionStorage.clear();
             window.location.href = "./login"
         }
     </script>
