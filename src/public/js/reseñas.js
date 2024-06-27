@@ -1,3 +1,7 @@
+/**
+ * Funcion para mostrar todos los comentarios 
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
     const myIdentificacion = sessionStorage.getItem('id');
     const comentarios = document.querySelector('.comentarios');
@@ -33,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+/**
+ * Esta funcion es para enviar el comentario
+ * @param {object} event el evento que desencadena el envio del comentario
+ */
 const enviarComentario = (event) => {
     const miComentario = document.getElementById('miComentario').value;
     const idUser = sessionStorage.getItem('id');

@@ -1,5 +1,13 @@
+/**
+ * Controladores del home
+ * @module Controladores_home
+ */
+
 import { config } from "dotenv";
 config();
+
+
+
 /**
  * Esta funcion es para la vista inicial de la pagina
  * @param {object} req peticion
@@ -25,7 +33,7 @@ const login = (req, res ) => {
 };
 
 /**
- * Esta funcion es para la vista inicial del registro
+ * Esta funcion es para la vista del registro
  * @param {object} req peticion
  * @param {object} res respuesta
  */

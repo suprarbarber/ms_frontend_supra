@@ -1,7 +1,8 @@
-import { config } from "dotenv";
-config();
+/**
+ * Controladores de los cortes
+ * @module Controladores_corte
+ */
 
-const url = process.env.BACKEND_URL;
 
 /**
  * Esta funcion es para mostrar los cortes

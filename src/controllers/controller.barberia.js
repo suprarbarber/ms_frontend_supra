@@ -1,5 +1,7 @@
-import { config } from "dotenv";
-config();
+/**
+ * Controladores de la seccion barbería
+ * @module Controladores_barberia
+ */
 
 
 /**
@@ -10,4 +12,5 @@ config();
 const barberia = (req, res ) => {
     res.render('view.barberia.cliente.ejs');
 };
+
 export { barberia }

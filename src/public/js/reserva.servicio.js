@@ -1,3 +1,9 @@
+/**
+ * Esta funcion es para mandar la información de los cortes en la reserva
+ * @param {number|string} servicioId
+ * @returns {void} - No retorna ningún valor.
+ */
+
 const rutaCorte = async(servicioId) => {
     const btn_servicio =  (`${servicioId}`);
 
@@ -21,7 +27,10 @@ const rutaCorte = async(servicioId) => {
     }
 }
 
-// lo que hace despues de dar click en el boton de siguiente 
+// lo que hace despues de dar click en el boton de siguiente
+/**
+ * Funcion del boton siguiente de los barberos en la reserva
+ */ 
 const siguientePaso = () => {
     const corteData = sessionStorage.getItem('corteData')
     

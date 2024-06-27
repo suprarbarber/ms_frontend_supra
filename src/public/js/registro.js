@@ -1,3 +1,7 @@
+/**
+ * Funcion para realizar el registro
+ */
+
 const registrar = () => {
     const id = document.getElementById('id').value;
     const nombre = document.getElementById('nombre').value;
@@ -40,8 +44,10 @@ const registrar = () => {
     })
 }
 
-// script para la verificacion de los campos
 
+/**
+ * funcion para la verificaion de los campos del registro
+ */
 (function () {
     'use strict';
     var forms = document.querySelectorAll('.needs-validation');

@@ -1,7 +1,19 @@
+/**
+ * Controladores de los servicios
+ * @module Controladores_servicio
+ */
+
 import { config } from "dotenv";
 config();
 
+
+/**
+ * Guarda la url del backend
+ * @type {string}
+ */
 const url = process.env.BACKEND_URL;
+
+
 
 /**
  * Esta funcion es para mostrar lo servicios

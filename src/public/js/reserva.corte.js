@@ -1,3 +1,6 @@
+/**
+ * Funcion para mostrar los cortes
+ */
 document.addEventListener('DOMContentLoaded', () => {
     
     cuerpo = document.getElementById('cuerpo');
@@ -40,7 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// lo que hace despues de dar click en el boton de siguiente 
+// lo que hace despues de dar click en el boton de siguiente
+/**
+ * Funcion del boton siguiente de los barberos en la reserva
+ */ 
 const siguientePaso = () => {
     const id_corte = sessionStorage.getItem('id_corte')
     

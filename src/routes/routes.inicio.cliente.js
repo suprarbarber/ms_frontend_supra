@@ -1,3 +1,8 @@
+/**
+ * Rutas del inicio del cliente
+ * @module Rutas_inicio_cliente
+ */
+
 import { Router } from "express"
 import { ayuda, docu, inicioCliente, listarBarberos, splash } from "../controllers/controller.inicio.cliente";
 import { producto } from "../controllers/controller.producto";
@@ -7,7 +12,10 @@ import { perfilCliente } from "../controllers/controller.cliente";
 import { barberia } from "../controllers/controller.barberia";
 import { resena } from "../controllers/controller.reseñas";
 
-
+/**
+ * Esta es la ruta de las secciones del cliente
+ * @type {object}
+ */
 const rutaInicioCliente = Router();
 
 rutaInicioCliente.get("/inicio", inicioCliente)

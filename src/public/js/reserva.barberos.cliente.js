@@ -1,3 +1,9 @@
+/**
+ * Esta funcion es para escoger el barbero
+ * @param {number|string} id_barbero
+ * @returns {void} - No retorna ningún valor.
+ */
+
 const escogerBarbero = (id_barbero) => {
     const idBarbero =  (`${id_barbero}`);
 
@@ -5,7 +11,12 @@ const escogerBarbero = (id_barbero) => {
     console.log(idBarbero);
 }
 
-// lo que hace despues de dar click en el boton de siguiente 
+
+
+// lo que hace despues de dar click en el boton de siguiente
+/**
+ * Funcion del boton siguiente de los barberos en la reserva
+ */
 const siguientePaso = () => {
     const id_barber = sessionStorage.getItem('id_barbero')
     

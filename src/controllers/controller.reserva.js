@@ -1,8 +1,24 @@
+/**
+ * Controladores de las reservas
+ * @module Controladores_reserva
+ */
+
 import { config } from "dotenv";
 config();
 
+
+/**
+ * Guarda la url del backend
+ * @type {string}
+ */
 const url = process.env.BACKEND_URL;
 
+
+/**
+ * Esta funcion es para mostrar los barberos en la reserva
+ * @param {object} req peticion
+ * @param {object} res respuesta
+ */
 const reservar = (req, res) => {
     let datos = "";
     const recurso = url + "/api/barbero"
@@ -14,6 +30,11 @@ const reservar = (req, res) => {
     })
 }
 
+/**
+ * Esta funcion es para mostrar los servicios en la reserva
+ * @param {object} req peticion
+ * @param {object} res respuesta
+ */
 const reservaServicios = (req, res) =>{
     let datos = "";
     const recurso = url + "/api/servicio"
@@ -27,7 +48,7 @@ const reservaServicios = (req, res) =>{
 }
 
 /**
- * Esta funcion es para mostrar los cortes
+ * Esta funcion es para mostrar los cortes en la reserva
  * @param {object} req peticion
  * @param {object} res respuesta
  */

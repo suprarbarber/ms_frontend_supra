@@ -1,3 +1,7 @@
+/**
+ * Es funcion para loguear a los usuarios
+ */
+
 const loguin = async() => {
     const correo = document.getElementById('email').value;
     const contra = document.getElementById('contrasena').value;

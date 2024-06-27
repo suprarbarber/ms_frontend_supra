@@ -1,3 +1,7 @@
+/**
+ * Funcion que se ejecuta cuando entra en la vista cortes
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
     
     cuerpo = document.getElementById('cuerpo');

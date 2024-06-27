@@ -5,6 +5,11 @@ config();
 import ruta from "./routes/index"
 import { msjconsola } from "./message/msj";
 
+
+/**
+ * Ruta de mi proyecto
+ * @type {object}
+ */
 const app = express();
 
 //configuracion del ejs

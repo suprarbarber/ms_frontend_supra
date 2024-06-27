@@ -1,3 +1,9 @@
+/**
+ * Esta funcion es para mandar la información de los cortes en el inicio
+ * @param {number|string} servicioId
+ * @returns {void} - No retorna ningún valor.
+ */
+
 const rutaCorte = async(servicioId) => {
     const btn_servicio =  (`${servicioId}`);
 

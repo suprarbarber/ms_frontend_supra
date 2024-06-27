@@ -1,6 +1,15 @@
+/**
+ * Rutas del home
+ * @module Rutas_home
+ */
+
 import { Router } from "express";
 import { inicio, login, registro } from "../controllers/controller.inicio";
 
+/**
+ * Esta es la ruta del home
+ * @type {object}
+ */
 const rutaInicio = Router();
 
 rutaInicio.get("/", inicio);

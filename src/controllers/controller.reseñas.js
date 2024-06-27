@@ -1,7 +1,20 @@
+/**
+ * Controladores de las reseñas
+ * @module Controladores_reseñas
+ */
+
 import { config } from "dotenv";
 config();
 
+
+/**
+ * Guarda la url del backend
+ * @type {string}
+ */
 const url = process.env.BACKEND_URL;
+
+
+
 /**
  * Esta funcion es para mostrar las reseñas
  * @param {object} req peticion

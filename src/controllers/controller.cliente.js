@@ -1,7 +1,8 @@
-import { config } from "dotenv";
-config();
+/**
+ * Controladores de los clientes
+ * @module Controladores_cliente
+ */
 
-const url = process.env.BACKEND_URL;
 
 /**
  * Esta funcion es para mostrar el perfil del cliente

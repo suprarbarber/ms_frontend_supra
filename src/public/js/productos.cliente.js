@@ -1,13 +1,7 @@
-const alerta = (event) => {
-  Swal.fire({
-    position: "center",
-    icon: "success",
-    title: "Ha sido agregrado al carrito",
-    showConfirmButton: false,
-    timer: 1500
-  });
-  
-}
+/**
+ * Esta funcion es para crear el reporte en pdf
+ * @param {object} event el evento que desencadena la creación del reporte 
+ */
 
 const reporte = (event) => {
   const reporte = new jsPDF();
