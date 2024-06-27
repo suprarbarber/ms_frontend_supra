@@ -35,6 +35,4 @@ const reservaCortes = (req, res ) => {
     res.render('view.reserva.cortes.ejs');
 };
 
-
-
 export { reservar, reservaServicios, reservaCortes }

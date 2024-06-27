@@ -33,5 +33,9 @@ const url = process.env.BACKEND_URL;
     res.render('view.splash.ejs')
 }
 
-export { inicioCliente, ayuda, listarBarberos, splash}
+const docu = (req, res) => {
+    res.render('view.documentacion.ejs')
+}
+
+export { inicioCliente, ayuda, listarBarberos, splash, docu}
 
