@@ -10,7 +10,7 @@ const siguientePaso = () => {
     const id_barber = sessionStorage.getItem('id_barbero')
     
     if (id_barber === null || id_barber === "") {
-
+        // alerta de si no seleccionado nada
         const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
         const appendAlert = (message, type) => {

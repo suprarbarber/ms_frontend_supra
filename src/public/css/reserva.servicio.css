@@ -20,4 +20,14 @@
 }
 
 
+#btn-siguiente{
+    width: 180px;
+    height: 65px;
+    background: #7ABDFF; 
+    cursor: pointer; 
+    position: absolute;
+    right: 35px;
+}
+
+
 

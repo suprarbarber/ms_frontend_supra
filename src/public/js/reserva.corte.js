@@ -26,10 +26,43 @@ document.addEventListener('DOMContentLoaded', () => {
             corte.appendChild(imagen)
             corte.appendChild(nombreCorte)
             cuerpo.appendChild(corte)
+
+            corte.addEventListener("click", function() {
+                sessionStorage.setItem('id_corte', item.id_corte)
+            })
+
         }
 
     )}else{
-        console.log("freddy");
-    }
+        console.log("No se encontraron datos");
 
+    }
 });
+
+
+// lo que hace despues de dar click en el boton de siguiente 
+const siguientePaso = () => {
+    const id_corte = sessionStorage.getItem('id_corte')
+    
+    if (id_corte === null || id_corte === "") {
+        // alerta de si no seleccionado nada
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+        const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+        }
+
+        appendAlert('No has seleccionado ningún servicio!', 'danger')
+    }
+     else {
+        window.location.href = "./reserva-servicio"
+    }
+}

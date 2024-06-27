@@ -7,7 +7,6 @@
 }
 #barber{
     width: 180px;
-    cursor: pointer;
 }
 
 #text-help{
@@ -25,6 +24,6 @@
     right: 35px;
 }
 
-.card:hover{
-    box-shadow: 2px 2px 8px rgb(47, 118, 240);
+#barber:hover{
+    box-shadow: 4px 4px 2px -2px gray;
 }

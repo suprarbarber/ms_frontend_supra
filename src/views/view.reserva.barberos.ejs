@@ -42,11 +42,11 @@
                 <div class="col-md-12 col-lg-12 center barberos">
                     <% datos.forEach(element => { %>
                         <!-- carta contenedora  -->
-                        <div onclick="escogerBarbero('<%= element.identificacion %>')" class="card bg-dark text-light center text-center flex-direction-column py-4 mx-2" id="barber">
+                        <div onclick="escogerBarbero('<%= element.identificacion %>')" class="btn btn-dark text-center flex-column py-4 mx-2" id="barber">
                             <!-- imagen foto de perfil barbero  -->
                             <img class="me-4 mb-2 rounded-circle" src="../img/usuario.png" width="90px">
                             <!-- nombre del barbero  -->
-                            <h5 class="card-title ms-2"> <%= element.nombre %></h5>
+                            <h5 class="title ms-2"> <%= element.nombre %></h5>
                         </div>
                     <% }); %>
                 </div>

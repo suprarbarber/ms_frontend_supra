@@ -16,16 +16,20 @@
         <!-- fin barra superior  -->
 
         <!-- contenido de la pagina  -->
-        <div class="container-fluid center" id="content">
+        <div class="container-fluid center flex-column" id="content">
+            <div class="row mt-3">
+                <h3 class="title">Selecciona el corte deseado</h3>
+            </div>
             <div class="row">
                 <div class="col-12 mt-2 mb-3">
                     <!-- barra de busqueda  -->
-                    <nav class="navbar text-center my-5 p-0 center">
-            
+                    <nav class="navbar text-center mt-5 mb-2 p-0 center">
                         <form class="d-flex center" role="search" style="width: 80%;">
                             <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
                         </form>
                     </nav>
+                    <!-- alerta  -->
+                    <div class="col-12" id="liveAlertPlaceholder"></div>
                 </div>
 
                 <div class="col-12 text-center mb-4">
