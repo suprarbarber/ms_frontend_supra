@@ -11,17 +11,32 @@ const alerta = (event) => {
 
 const reporte = (event) => {
   const reporte = new jsPDF();
-  const nombre = event.target.parentElement.parentElement.parentElement.children[1].producto;
-  console.log(nombre);
-  let fila = 10;
+  const productos = event.target.parentElement.parentElement.parentElement.children[1].innerText;
   let pageWidth = reporte.internal.pageSize.width;
   let fecha = new Date();
+  let fila = 10;
+  
+  let imagenRuta = './img/logosupra.png';
 
-  reporte.line(10,10, pageWidth - 10, 10)
-  reporte.text(10,fila, "Este es mi reporte")
-  reporte.text(10,fila+=10, `Hola mi productos favorito: ${nombre}`);
-  reporte.text(10,fila+=10, "Este es mi reporte")
-  reporte.text(10,fila+=10, "Este es mi reporte")
-  reporte.text(10,fila+=10, `Fecha: ${fecha}`)
-  reporte.save("Reporte productos");
-}
+  
+  // Texto estático antes de la imagen
+  reporte.setFontSize(12);
+  reporte.text(60, fila += 55, "REPORTE DE TODOS NUESTROS PRODUCTOS");
+  fila += 10;
+  reporte.text(10, fila += 10, "Lista de productos:");
+  reporte.text(10, fila += 10, ` ${productos}`);
+
+  // Dibujar una línea
+  reporte.line(10, fila+=160, pageWidth - 10, fila);
+  
+  reporte.text(10, fila += 10, "Autor(a): Angie Nataly Nohava Vargas");
+  reporte.text(10, fila += 10, `Fecha: ${fecha}`);
+
+  // Cargar y dibujar una imagen
+  const imagen = new Image();
+  imagen.onload = function() {
+    reporte.addImage(imagen, 'PNG', 50, 1, 100, 50); // Ajusta tamaño y posición según necesites
+    reporte.save("Reporte_Productos.pdf");
+  };
+  imagen.src = imagenRuta;
+};
