@@ -56,4 +56,13 @@ const reservaCortes = (req, res ) => {
     res.render('view.reserva.cortes.ejs');
 };
 
-export { reservar, reservaServicios, reservaCortes }
+/**
+ * Esta funcion es para mostrar los horarios en la reserva
+ * @param {object} req peticion
+ * @param {object} res respuesta
+ */
+const reservaHorario = (req, res ) => {
+    res.render('view.reserva.horario.ejs');
+};
+
+export { reservar, reservaServicios, reservaCortes, reservaHorario }

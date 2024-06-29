@@ -4,7 +4,7 @@
  */
 
 import { Router } from "express"
-import { reservaCortes, reservaServicios, reservar } from "../controllers/controller.reserva";
+import { reservaCortes, reservaHorario, reservaServicios, reservar } from "../controllers/controller.reserva";
 
 /**
  * Esta es la ruta de la reserva
@@ -15,5 +15,6 @@ const rutaReserva = Router();
 rutaReserva.get("/reserva", reservar)
 rutaReserva.get("/reserva-servicio", reservaServicios)
 rutaReserva.get("/reserva-corte", reservaCortes)
+rutaReserva.get("/reserva-horario", reservaHorario)
 
 export default rutaReserva;

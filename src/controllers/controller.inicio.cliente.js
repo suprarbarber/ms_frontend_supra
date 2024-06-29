@@ -62,6 +62,15 @@ const splash = (req, res) => {
 
 
 /**
+ * Esta funcion es para la vista de las citas
+ * @param {object} req peticion
+ * @param {object} res respuesta
+ */
+const misCitas = (req, res) => {
+    res.render('view.citas.cliente.ejs')
+}
+
+/**
  * Esta funcion es para la vista de la documentacion de mi proyecto
  * @param {object} req peticion
  * @param {object} res respuesta
@@ -70,5 +79,5 @@ const docu = (req, res) => {
     res.render('view.documentacion.ejs')
 }
 
-export { inicioCliente, ayuda, listarBarberos, splash, docu}
+export { inicioCliente, ayuda, listarBarberos, splash, docu, misCitas}
 

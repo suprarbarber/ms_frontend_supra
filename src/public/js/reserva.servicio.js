@@ -17,6 +17,7 @@ const rutaCorte = async(servicioId) => {
         if(data.body && data.body.length > 0){
 
             sessionStorage.setItem('corteData', JSON.stringify(data.body))
+            sessionStorage.setItem('id_servicio', JSON.stringify(data.body[0].id_servicio))
             window.location.href = "./reserva-corte"
         }else{
             console.log("No se encontraron los datos");
@@ -53,7 +54,7 @@ const siguientePaso = () => {
         appendAlert('No has seleccionado ningún servicio!', 'danger')
     }
      else {
-        window.location.href = "./reserva-servicio"
+        window.location.href = "./reserva-horario"
     }
 }
 

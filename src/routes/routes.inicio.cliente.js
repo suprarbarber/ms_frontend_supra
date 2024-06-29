@@ -4,7 +4,7 @@
  */
 
 import { Router } from "express"
-import { ayuda, docu, inicioCliente, listarBarberos, splash } from "../controllers/controller.inicio.cliente";
+import { ayuda, docu, inicioCliente, listarBarberos, misCitas, splash } from "../controllers/controller.inicio.cliente";
 import { producto } from "../controllers/controller.producto";
 import { servicio } from "../controllers/controller.servicio";
 import { corte } from "../controllers/controller.corte";
@@ -29,5 +29,6 @@ rutaInicioCliente.get("/corte", corte)
 rutaInicioCliente.get("/barberia", barberia)
 rutaInicioCliente.get("/resena", resena)
 rutaInicioCliente.get("/documentacion", docu)
+rutaInicioCliente.get("/citas", misCitas)
 
 export default rutaInicioCliente;
