@@ -38,13 +38,8 @@ const login = (req, res ) => {
  * @param {object} res respuesta
  */
 const registro = (req, res ) => {
-    // se trae la variable url del .env 
-    const url = process.env.BACKEND_URL;
-
-    const options = {url: url};
-    
     // Se llama a la vista y se le manda la variable
-    res.render('view.registro.ejs', options);
+    res.render('view.registro.ejs');
 };
 
 export { inicio, login, registro}

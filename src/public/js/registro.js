@@ -11,9 +11,9 @@ const registrar = () => {
     const roll = document.querySelector('#roll').value;
 
     const url = sessionStorage.getItem('urlsupra');
-    console.log(url);
     const endpoint = url + "/api/registro"
 
+    
     const options = {
         method : 'POST',
         headers : {
@@ -28,16 +28,13 @@ const registrar = () => {
             roll : roll
         })
     };
-
+    
     fetch(endpoint, options)
     .then(res => res.json())
     .then(data => {
-        console.log(data);
         if(data.error == true){
             alertify.error('Algo está errado');
-        } else{
-            window.location.href = "/login"
-        }
+        } 
     })
     .catch(err => {
         console.log("Tenemos un problema", err);

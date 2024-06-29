@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let datos = "";
         datos = data.body;
 
-
         datos.forEach(item => {
             const reservas = document.getElementById('citas')
 
@@ -42,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fecha.textContent = campofecha
 
             const colTurno = document.createElement('div');
-            colTurno.className = 'col-2 text-center '
+            colTurno.className = 'col-2 text-center'
 
             const tituTurno = document.createElement('h6');
             tituTurno.className = ''
@@ -83,14 +82,75 @@ document.addEventListener('DOMContentLoaded', () => {
             btnReprogramar.className = 'btn btn-info p-2 mb-2'
             btnReprogramar.textContent = 'Reprogramar'
             btnReprogramar.id = 'btnReprogramar'
+
+            btnReprogramar.onclick = function() {
+                Swal.fire({
+                    title: "Estas seguro de reprogramar la cita?",
+                    showCancelButton: true,
+                    confirmButtonText: "Si",
+                    denyButtonText: `Cancelar`
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                        sessionStorage.setItem('id_reserva' ,item.id_reserva)  
+                        sessionStorage.removeItem('id_servicio')                     
+                        sessionStorage.removeItem('id_barbero')                     
+                        sessionStorage.removeItem('id_corte')                     
+                        sessionStorage.removeItem('id_horario')                     
+                        sessionStorage.removeItem('corteData')                     
+                        window.location.href = "./reserva-horario-reprogramacion"
+                    }
+                });
+            }
             
             const btnCarcelar = document.createElement('button')
             btnCarcelar.className = 'btn btn-danger p-2'
             btnCarcelar.textContent = 'Cancelar'
             btnCarcelar.id = 'btnCancelar'
-
             
+            btnCarcelar.onclick = function() {
+                Swal.fire({
+                    title: "Estas seguro de cancelar la cita?",
+                    showCancelButton: true,
+                    confirmButtonText: "Si",
+                    denyButtonText: `No`
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                        const endpoint =  url + `/api/cita/${item.id_reserva}`
 
+                        const options = {
+                            method : 'PUT',
+                            headers : {
+                                'Content-Type' : 'application/json'
+                            }
+                        };
+
+                        fetch(endpoint, options)
+                        .then(res => res.json())
+                        .then(data => {
+                            let datos = "";
+                            datos = data.body;
+                            Swal.fire({
+                                position: "center",
+                                icon: "success",
+                                title: "Su cita ha sido cancelada",
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+
+                            setTimeout(() => {
+                                window.location.href = "./citas"
+                            }, 1600);
+
+                        })
+                        .catch()
+
+
+
+                        
+                    }
+                });
+            }
+            
 
             colBotones.appendChild(btnReprogramar)
             colBotones.appendChild(btnCarcelar)
@@ -115,7 +175,9 @@ document.addEventListener('DOMContentLoaded', () => {
             cita.appendChild(colTurno)
             cita.appendChild(colCorte)
             cita.appendChild(colBarbero)
-            cita.appendChild(colBotones)
+            if(item.estado_reserva != 'CANCELADO'){
+                cita.appendChild(colBotones)
+            }
             reservas.appendChild(cita)
             
         });

@@ -65,4 +65,7 @@ const reservaHorario = (req, res ) => {
     res.render('view.reserva.horario.ejs');
 };
 
-export { reservar, reservaServicios, reservaCortes, reservaHorario }
+const reservaRepro = (req, res) => {
+    res.render('view.reserva.horario.repro.ejs')
+}
+export { reservar, reservaServicios, reservaCortes, reservaHorario, reservaRepro }

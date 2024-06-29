@@ -27,7 +27,7 @@ const loguin = async() => {
     .then(res => res.json())
     .then(data => {
         if(data.error == true){
-            alertify.error('Contraseña errada');
+            alertify.error('Algo está errado');
         }else{
             console.log(data.body);
             sessionStorage.setItem("token", data.body.token)

@@ -10,11 +10,11 @@ dias.addEventListener('click', function(event) {
  */
 function turno(btn) {
     const id_turno = btn.id;
-    sessionStorage.setItem("id_horario", btn.id)
+    sessionStorage.setItem("new_id_horario", btn.id)
 }
 
 function finalizar() {
-    const idHorario = sessionStorage.getItem('id_horario')
+    const idHorario = sessionStorage.getItem('new_id_horario')
     if(idHorario == null || idHorario == ""){
         // alerta de si no seleccionado nada
         const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
@@ -33,27 +33,20 @@ function finalizar() {
 
         appendAlert('No has seleccionado ningún turno!', 'danger')
     }else{
-        const id = sessionStorage.getItem('id');
-        const id_barbero = sessionStorage.getItem('id_barbero');
-        const id_horario = sessionStorage.getItem('id_horario');
-        const id_servicio = sessionStorage.getItem('id_servicio');
-        const id_corte = sessionStorage.getItem('id_corte');
+        const id_reserva = sessionStorage.getItem('id_reserva');
+        const id_horario = sessionStorage.getItem('new_id_horario');
         const url = sessionStorage.getItem('urlsupra');
 
-        console.log(url);
         const endpoint = url + "/api/cita"
 
         const options = {
-            method : 'POST',
+            method : 'PUT',
             headers : {
                 'Content-Type' : 'application/json'
             },
             body : JSON.stringify({
-                id : id,
-                id_barbero : id_barbero,
-                id_horario : id_horario,
-                id_servicio : id_servicio,
-                id_corte : id_corte
+                id_reserva : id_reserva,
+                id_horario : id_horario
             })
         };
 
@@ -79,7 +72,7 @@ function finalizar() {
                 });
 
                 setTimeout(() => {
-                    window.location.href = "./inicio"
+                    window.location.href = "./citas"
                 }, 1600);
             }
         })

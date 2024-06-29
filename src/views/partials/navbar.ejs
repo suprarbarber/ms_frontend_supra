@@ -30,10 +30,12 @@
 
     if(token == "" || token == null){
         window.location.href = "/login"
+        sessionStorage.clear();
     }
     const url = sessionStorage.getItem("urlsupra") + "/api/oauth"
     if(url == "" ||  url == null){
         window.location.href = "/login"
+        sessionStorage.clear();
     }
 
     const options = {
