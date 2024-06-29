@@ -133,10 +133,9 @@
                         </div>
                         <div class="row">
                             <div class="col-12d-flex flex-column ps-2" id="botones">
-                                <button id="1" onclick="turno(this)" type="button" class="btn btn-secondary border-0 text-dark btn-turno">08:00 am</button>
-                                <button id="2" onclick="turno(this)" type="button" class="btn btn-secondary border-0 text-dark btn-turno">09:00 am</button>
-                                <button id="3" onclick="turno(this)" type="button" class="btn btn-secondary border-0 text-dark btn-turno">10:00 am</button>
-                                <button id="4" onclick="turno(this)" type="button" class="btn btn-secondary border-0 text-dark btn-turno">11:00 am</button>
+                                <% datos.forEach(element => { %>
+                                    <button id="<%= element.id_registro_horario %>" onclick="turno(this)" type="button" class="btn btn-secondary border-0 text-dark btn-turno"><%= element.hora_inicial %></button>
+                                <% }); %>
                             </div>
                             <div class="col-12">
                                 <div class="col-12" id="liveAlertPlaceholder"></div>

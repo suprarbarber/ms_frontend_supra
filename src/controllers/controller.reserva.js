@@ -75,6 +75,15 @@ const reservaHorario = (req, res ) => {
 };
 
 const reservaRepro = (req, res) => {
-    res.render('view.reserva.horario.repro.ejs')
+    let datos = "";
+    const endpoint = url + "/api/turno"
+    
+    fetch(endpoint)
+    .then(res => res.json())
+    .then(data => {
+        datos = data.body;
+        
+        res.render('view.reserva.horario.repro.ejs',{datos: datos});
+    })
 }
 export { reservar, reservaServicios, reservaCortes, reservaHorario, reservaRepro }
