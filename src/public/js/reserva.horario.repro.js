@@ -2,6 +2,8 @@ const dias = document.getElementById('num-dias');
 
 dias.addEventListener('click', function(event) {
     event.target.classList.add('seleccionado');
+    id_dia = `${event.target.id}`
+    sessionStorage.setItem('new_id_dia', id_dia);
 })
 
 /**
@@ -10,12 +12,14 @@ dias.addEventListener('click', function(event) {
  */
 function turno(btn) {
     const id_turno = btn.id;
-    sessionStorage.setItem("new_id_horario", btn.id)
+    sessionStorage.setItem("new_id_turno", btn.id)
 }
 
+
+
 function finalizar() {
-    const idHorario = sessionStorage.getItem('new_id_horario')
-    if(idHorario == null || idHorario == ""){
+    const idDia = sessionStorage.getItem('new_id_dia')
+    if(idDia == null || idDia == ""){
         // alerta de si no seleccionado nada
         const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
@@ -31,10 +35,11 @@ function finalizar() {
         alertPlaceholder.append(wrapper)
         }
 
-        appendAlert('No has seleccionado ningún turno!', 'danger')
+        appendAlert('No has seleccionado ningún horario!', 'danger')
     }else{
-        const id_reserva = sessionStorage.getItem('id_reserva');
-        const id_horario = sessionStorage.getItem('new_id_horario');
+
+        const idReserva = sessionStorage.getItem('id_reserva');
+        const idTurno = sessionStorage.getItem('new_id_turno');
         const url = sessionStorage.getItem('urlsupra');
 
         const endpoint = url + "/api/cita"
@@ -45,8 +50,9 @@ function finalizar() {
                 'Content-Type' : 'application/json'
             },
             body : JSON.stringify({
-                id_reserva : id_reserva,
-                id_horario : id_horario
+                id_reserva : idReserva,
+                id_turno : idTurno,
+                id_fecha : idDia
             })
         };
 

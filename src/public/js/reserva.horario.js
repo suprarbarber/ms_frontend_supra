@@ -2,6 +2,8 @@ const dias = document.getElementById('num-dias');
 
 dias.addEventListener('click', function(event) {
     event.target.classList.add('seleccionado');
+    id_dia = `${event.target.id}`
+    sessionStorage.setItem('id_dia', id_dia);
 })
 
 /**
@@ -10,11 +12,11 @@ dias.addEventListener('click', function(event) {
  */
 function turno(btn) {
     const id_turno = btn.id;
-    sessionStorage.setItem("id_horario", btn.id)
+    sessionStorage.setItem("id_turno", id_turno)
 }
 
 function finalizar() {
-    const idHorario = sessionStorage.getItem('id_horario')
+    const idHorario = sessionStorage.getItem('id_turno')
     if(idHorario == null || idHorario == ""){
         // alerta de si no seleccionado nada
         const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
@@ -35,7 +37,8 @@ function finalizar() {
     }else{
         const id = sessionStorage.getItem('id');
         const id_barbero = sessionStorage.getItem('id_barbero');
-        const id_horario = sessionStorage.getItem('id_horario');
+        const id_turno = sessionStorage.getItem('id_turno');
+        const id_dia = sessionStorage.getItem('id_dia');
         const id_servicio = sessionStorage.getItem('id_servicio');
         const id_corte = sessionStorage.getItem('id_corte');
         const url = sessionStorage.getItem('urlsupra');
@@ -51,9 +54,10 @@ function finalizar() {
             body : JSON.stringify({
                 id : id,
                 id_barbero : id_barbero,
-                id_horario : id_horario,
+                id_turno : id_turno,
                 id_servicio : id_servicio,
-                id_corte : id_corte
+                id_corte : id_corte,
+                id_fecha :  id_dia
             })
         };
 
@@ -66,9 +70,10 @@ function finalizar() {
             }else{
                 sessionStorage.removeItem('id_barbero') 
                 sessionStorage.removeItem('id_corte')
-                sessionStorage.removeItem('id_horario')
+                sessionStorage.removeItem('id_turno')
                 sessionStorage.removeItem('id_servicio')
                 sessionStorage.removeItem('corteData')
+                sessionStorage.removeItem('id_dia')
 
                 Swal.fire({
                     position: "center",

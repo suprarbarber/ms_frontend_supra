@@ -89,13 +89,12 @@
     font-style: normal;
 }
 
-#botones{
+#turnos{
     height: 460px;
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
     overflow-y: auto;
-    
 }
 
 .btn-turno{

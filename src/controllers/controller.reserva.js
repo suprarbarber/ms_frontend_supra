@@ -62,7 +62,16 @@ const reservaCortes = (req, res ) => {
  * @param {object} res respuesta
  */
 const reservaHorario = (req, res ) => {
-    res.render('view.reserva.horario.ejs');
+    let datos = "";
+    const endpoint = url + "/api/turno"
+
+    fetch(endpoint)
+    .then(res => res.json())
+    .then(data => {
+        datos = data.body;
+        
+        res.render('view.reserva.horario.ejs', {datos: datos});
+    })
 };
 
 const reservaRepro = (req, res) => {
