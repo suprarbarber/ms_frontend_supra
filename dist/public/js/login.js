@@ -6,9 +6,11 @@ var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/
 /**
  * Es funcion para loguear a los usuarios
  */
-
-var loguin = /*#__PURE__*/function () {
-  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
+function loguin() {
+  return _loguin.apply(this, arguments);
+}
+function _loguin() {
+  _loguin = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
     var correo, contra, url, urlsupra, options;
     return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) switch (_context.prev = _context.next) {
@@ -51,7 +53,5 @@ var loguin = /*#__PURE__*/function () {
       }
     }, _callee);
   }));
-  return function loguin() {
-    return _ref.apply(this, arguments);
-  };
-}();
+  return _loguin.apply(this, arguments);
+}
