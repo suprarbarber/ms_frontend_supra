@@ -23,7 +23,7 @@ async function loguin() {
     };
     
     console.log(urlsupra);
-    await fetch(urlsupra, options )
+    await fetch(urlsupra, options)
     .then(res => res.json())
     .then(data => {
         if(data.error == true){
