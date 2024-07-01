@@ -2,7 +2,7 @@
  * Es funcion para loguear a los usuarios
  */
 
-const loguin = async() => {
+async function loguin() {
     const correo = document.getElementById('email').value;
     const contra = document.getElementById('contrasena').value;
     const url = document.getElementById('url').value;
