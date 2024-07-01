@@ -152,7 +152,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
 
-            colBotones.appendChild(btnReprogramar)
+            if(item.estado_reserva != 'REPROGRAMADO'){
+                colBotones.appendChild(btnReprogramar)
+            }
             colBotones.appendChild(btnCarcelar)
 
             colBarbero.appendChild(imgBarbero)

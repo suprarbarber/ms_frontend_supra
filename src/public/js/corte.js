@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(corteData && corteData.length > 0){
         corteData.forEach(item => {
             const corte = document.createElement('div');
-            corte.className = 'btn text-light text-center mx-2 my-2';
+            corte.className = 'btn text-light text-center mx-2 my-2 corte';
             corte.id = 'corte';
 
             
@@ -38,4 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("freddy");
     }
 
+});
+
+document.addEventListener('keyup', function(e) {
+
+    if(e.target.matches('#buscador')){
+
+        document.querySelectorAll('.corte').forEach(element => {
+            element.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+            ?element.classList.remove('filtro')
+            :element.classList.add('filtro')
+        });
+    }
 });

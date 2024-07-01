@@ -28,33 +28,4 @@ const rutaCorte = async(servicioId) => {
     }
 }
 
-// lo que hace despues de dar click en el boton de siguiente
-/**
- * Funcion del boton siguiente de los barberos en la reserva
- */ 
-const siguientePaso = () => {
-    const corteData = sessionStorage.getItem('corteData')
-    
-    if (corteData === null || corteData === "") {
-        // alerta de si no seleccionado nada
-        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-
-        const appendAlert = (message, type) => {
-        const wrapper = document.createElement('div')
-        wrapper.innerHTML = [
-            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-            `   <div>${message}</div>`,
-            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-            '</div>'
-        ].join('')
-
-        alertPlaceholder.append(wrapper)
-        }
-
-        appendAlert('No has seleccionado ningún servicio!', 'danger')
-    }
-     else {
-        window.location.href = "./reserva-horario"
-    }
-}
 

@@ -69,6 +69,6 @@ const siguientePaso = () => {
         appendAlert('No has seleccionado ningún servicio!', 'danger')
     }
      else {
-        window.location.href = "./reserva-servicio"
+        window.location.href = "./reserva-horario"
     }
 }

@@ -9,3 +9,7 @@
     font-style: normal;
     cursor: default;
 }
+
+.filtro{
+    display: none;
+}
