@@ -1,0 +1,76 @@
+<%- include('partials/headerhtml') %>
+    
+    <link rel="stylesheet" href="./css/reserva.barberos.cliente.css" />
+    <title>Reserva barberos</title>
+</head>
+
+<body>
+  <div class="main-container d-flex">
+    <!-- barra lateral  -->
+    <%- include('partials/sidebar') %>
+     
+    <div class="content">
+
+        <!-- barra de navegacion superior  -->
+        <%- include('partials/navbar.reserva.ejs') %>
+        <!-- fin barra superior  -->
+
+        <!-- contenido de la pagina  -->
+        <div class="container-fluid" id="content">
+
+            <div class="row row-barra">
+                <!-- texto instruccion  -->
+                <h2 class="col-md-12 fs-2 mt-3 center " id="text-help">Seleccione su barbero</h2>
+                
+                <!-- barra de busqueda  -->
+                <nav class="navbar text-center my-2 p-0 center">
+    
+                    <form class="d-flex center" role="search" style="width: 80%;">
+    
+                        <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+                    </form>
+                </nav>
+
+
+                <div class="col-12" id="liveAlertPlaceholder"></div>
+            </div>
+
+
+            <!-- fila barberos  -->
+            <div class="row">
+                <!-- Barberos -->
+                <div class="col-md-12 col-lg-12 center barberos">
+                    <% datos.forEach(element => { %>
+                        <!-- carta contenedora  -->
+                        <div onclick="escogerBarbero('<%= element.id_barbero %>')" class="btn btn-dark text-center flex-column py-4 mx-2" id="barber">
+                            <!-- imagen foto de perfil barbero  -->
+                            <img class="me-4 mb-2 rounded-circle" src="../img/usuario.png" width="90px">
+                            <!-- nombre del barbero  -->
+                            <h5 class="title ms-2"> <%= element.nombre %></h5>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            
+            <!-- Boton siguiente  -->
+            <div class="row" style="position: relative;">
+                <div class="col-md-3">
+                    <button onclick="siguientePaso();" class="btn fs-5 text-light" id="btn-siguiente">
+                        Siguiente
+                    </button>
+                </div>
+            </div>
+        </div>
+            
+    </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.barra.lateral.js"></script>
+    <!-- script personal  -->
+     <script src="./js/reserva.barberos.cliente.js"></script>
+
+
+</body>
+</html>

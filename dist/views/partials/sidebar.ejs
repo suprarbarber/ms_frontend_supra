@@ -1,0 +1,91 @@
+<!-- barra lateral  -->
+<div class="sidebar" id="side_nav">
+    <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
+        <h1 class="fs-4"><span class="text-white"><a href="./inicio" >Supra barber</a></span></h1>
+
+        <button class="btn d-md-none d-block close-btn px-1 py-0 text-light">
+            <i class="fal fa-stream text-light"></i>
+        </button>
+    </div>
+
+    <ul class="list-unstyled px-2">
+
+        <li class="">
+            <a href="./citas" class="text-decoration-none px-3 py-2 d-block fs-6">
+                <i class="fas fa-calendar-check"></i> Mis citas
+            </a>
+        </li>
+
+        <hr class="h-color mx-2">
+
+        <li class="">
+            <a href="./barberos" class="text-decoration-none px-3 py-2 d-block fs-6">
+                <i class="far fa-user-circle"></i> Barberos
+            </a>
+        </li>
+
+        <hr class="h-color mx-2">
+
+        <li class="">
+            <a href="./servicio" class="text-decoration-none px-3 py-2 d-block fs-6">
+                <i class="fas fa-cut"></i> Servicios
+            </a>
+        </li>
+
+        <hr class="h-color mx-2">
+
+        <li class="">
+            <a href="/producto" class="text-decoration-none px-3 py-2 d-block fs-6">
+                <i class="fas fa-wine-bottle"></i> Productos
+            </a>
+        </li>
+
+
+        <hr class="h-color mx-2">
+
+        <li class="">
+            <a href="./resena" class="text-decoration-none px-3 py-2 d-block fs-6">
+                <i class="fas fa-comment-alt"></i> Reseñas
+            </a>
+        </li>
+
+        <hr class="h-color mx-2">
+
+        <li class="">
+            <a href="/ayuda" class="text-decoration-none px-3 py-2 d-block fs-6">
+                <i class="fas fa-question"></i> Ayuda
+            </a>
+        </li>
+
+        <hr class="h-color mx-2">
+        
+        <li class="d-md-none d-block">
+            <a href="./barberia" class="text-decoration-none px-3 py-2 d-block fs-6">
+                <i class="fas fa-user-cog"></i> Barbería
+            </a>
+        </li>
+        
+        <hr class="h-color mx-2 d-md-none d-lg-none d-block">
+        
+        <li class="d-md-none d-block">
+            <a href="./perfil" class="text-decoration-none px-3 py-2 d-block fs-6">
+                <i class="fas fa-user-cog"></i> Configuración cuenta
+            </a>
+        </li>
+        
+        <hr class="h-color mx-2 d-md-none d-lg-none d-block">
+        
+        <li class="cs">
+            <a href="#" onclick="cerrarSesion()" class="text-decoration-none px-3 py-2 d-block fs-6">
+                <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+            </a>
+        </li>
+    </ul>
+    <script>
+        const cerrarSesion = () => {
+            sessionStorage.clear();
+            window.location.href = "./login"
+        }
+    </script>
+
+</div>

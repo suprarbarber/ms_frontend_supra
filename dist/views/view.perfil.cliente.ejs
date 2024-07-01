@@ -1,0 +1,189 @@
+<%- include('partials/headerhtml') %>
+
+    <link rel="stylesheet" href="./css/perfil.cliente.css" />
+    <title>Perfil</title>
+</head>
+
+<body>
+  <div class="main-container d-flex">
+    <!-- barra lateral  -->
+    <%- include('partials/sidebar') %>
+    
+    <div class="content">
+
+      <!-- barra de navegacion superior  -->
+      <%- include('partials/navbar') %>
+      <!-- fin barra superior  -->
+
+      <!-- contenido de la pagina  -->
+      <div class="content-body text-center center pt-0" style="width: 100%; height: 84%;" id="contenidos">
+            
+        <img src="img/usuario.png" class="imagen-pefil" width="100px">
+
+        
+
+          <!-- cuadro azul  -->
+          <div class="caja border rounded center p-4" id="datos">
+
+            <!-- tabla de datos  -->
+            <div class="list-group" id="list-group">
+                        
+                <!-- campo nombre  -->
+                <div class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
+                  <!-- informacion  -->
+                  <div id="titu" class="d-flex flex-column">
+                    Nombre de usuario      
+                    <p id="nombre" class="fs-5 text-dark"></p>
+                  </div>
+                  <!-- boton modificar  -->
+                  <div id="edit">
+                    <div type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#modalNombre" data-bs-whatever="@fat">Editar</div>
+                  </div>            
+                </div>
+
+                <!-- campo id  -->
+                <button type="button" class="list-group-item list-group-item-action d-flex justify-content-start flex-column" disabled>
+                  Identificación<br>
+                  <p id="id" class="fs-5"></p>
+                </button>
+
+                <!-- campo Correo  -->
+                <div class="list-group-item list-group-item-action text-secondary d-flex justify-content-between">
+                  <div id="titu" class="text-start">
+                    Correo electronico
+                    <p id="correo" class="fs-5 text-dark"></p>
+                  </div>
+                  <!-- boton modificar  -->
+                  <div id="edit">
+                      <div type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#modalCorreo" data-bs-whatever="@fat">Editar</div>
+                  </div>
+                </div>
+                        
+                <!-- telefono  -->
+                <div class="list-group-item list-group-item-action text-secondary d-flex justify-content-between" id="op">
+                  <div id="titu">
+                    Teléfono<br>
+                    <p id="telefono" class="fs-5 text-dark"></p>
+                  </div>
+                  <div id="edit">
+                    <div type="button" class="fs-6" data-bs-toggle="modal" data-bs-target="#modalTelefono" data-bs-whatever="@fat">Editar</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        
+                
+        <!-- Boton para eliminar la cuenta del cliente  -->
+        <div class="row d-flex justify-content-start mt-3" style="width: 100%;">
+          <button type="button" onclick="desactivarCuenta()" class="btn btn-outline-secondary rounded-pill mt-2 ms-4" style="width: 150px;" data-bs-toggle="modal" data-bs-target="#modalCuenta" data-bs-whatever="@fat">Eliminar cuenta</button>
+        </div>
+        
+        <!-- Modal de editar nombre -->
+        <div class="modal fade" id="modalNombre" tabindex="-1" aria-labelledby="modalLabelNombre" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar nombre</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Ingresa el nuevo nombre</label>
+                    <input type="text" class="form-control" id="recipient-nombre">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" onclick="modificarNombre()" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal de editar correo -->
+        <div class="modal fade" id="modalCorreo" tabindex="-1" aria-labelledby="modalLabelCorreo" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar correo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Ingresa el nuevo correo</label>
+                    <input type="email" class="form-control" id="recipient-correo">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" onclick="modificarCorreo()" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal de editar telefono -->
+        <div class="modal fade" id="modalTelefono" tabindex="-1" aria-labelledby="modalLabelTeleno" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar teléfono</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Ingresa el nuevo teléfono</label>
+                    <input type="number" class="form-control" id="recipient-telefono">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" onclick="modificarTelefono()" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal de deactivar cuenta -->
+        <div class="modal fade" id="modalCuenta" tabindex="-1" aria-labelledby="modalLabelCuenta" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar cuenta</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Si estas seguro de eliminar tu cuenta, Ingresa tu contraseña</label>
+                    <input type="password" class="form-control" id="recipient-contra">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" onclick="desactivarCuenta()" class="btn btn-outline-danger">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/script.barra.lateral.js"></script>
+  <!-- sweetalert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- script de alertifý  -->
+  <script src="./plugins/alertifyjs/alertify.min.js"></script>
+  <script src="./js/perfil.cliente.js"></script>
+
+
+</body>
+</html>

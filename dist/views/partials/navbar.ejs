@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-md" style="background-color: #03167C;">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between d-md-none d-block">
+            <a class="navbar-brand fs-4" href="#"><span class="rounded px-2 py-0 text-white">Supra Barber</span></a>
+         <button class="btn px-1 py-0 open-btn me-2 text-white"><i class="fal fa-stream"></i></button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+
+                <li class="nav-item center">
+                    <!-- boton reservar  -->
+                    <a class="btn fs-6 me-1" href="./reserva" role="button" style="background: #8AF0D3; width: 130px;">Reservar cita</a>
+                    <!-- link barberia  -->
+                    <a class="nav-link text-light" href="./barberia">Barbería</a>
+                    <!-- link mis citas  -->
+                    <a class="nav-link text-light me-3" href="#">Mis citas</a>
+                    <!-- link perfil  -->
+                    <a class="navbar-brand d-none d-sm-block" href="./perfil" id="perfil">
+                        <img src="img/usuario.png" width="35">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- validar token  -->
+<script>
+    const token = sessionStorage.getItem("token")
+
+    if(token == "" || token == null){
+        window.location.href = "/login"
+        sessionStorage.clear();
+    }
+    const url = sessionStorage.getItem("urlsupra") + "/api/oauth"
+    if(url == "" ||  url == null){
+        window.location.href = "/login"
+        sessionStorage.clear();
+    }
+
+    const options = {
+        method : "POST",
+        headers : {
+            'Content-Type' : 'application/json',
+            'x-access-token' : token
+        }
+    }
+
+
+    
+</script>

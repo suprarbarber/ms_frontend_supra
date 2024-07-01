@@ -1,0 +1,35 @@
+<%- include('partials/headerhtml') %>
+    
+    <link rel="stylesheet" href="./css/citas.cliente.css" />
+    <title>Mis citas</title>
+</head>
+
+<body>
+  <div class="main-container d-flex">
+    <!-- barra lateral  -->
+     <%- include('partials/sidebar') %>
+     
+    <div class="content">
+
+        <!-- barra de navegacion superior  -->
+        <%- include('partials/navbar.ejs') %>
+        <!-- fin barra superior  -->
+
+        <!-- contenido de la pagina  -->
+        <div class="container-fluid center flex-column pt-4" id="citas">
+
+        </div>
+            
+    </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.barra.lateral.js"></script>
+    <script src="./js/citas.cliente.js"></script>
+    <!-- sweetalert2  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</body>
+</html>
