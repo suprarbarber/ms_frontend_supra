@@ -1,0 +1,19 @@
+/* importa cion de fuente inter  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+#cita{
+    width: 85%;
+    background-color: #EDEDED;
+    border: 3px #00E024 solid;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+#btnReprogramar, #btnCancelar {
+    width: 100%;
+}

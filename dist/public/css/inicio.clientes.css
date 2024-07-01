@@ -1,0 +1,57 @@
+/* Importacion de la fuente Bona nova  */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Importacion de la fuente bowlby  */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Bowlby+One+SC&family=Coiny&family=Goudy+Bookletter+1911&family=Itim&display=swap');
+
+
+#contenido{
+    height: 91%;
+    background: url(../img/fondo.inicio.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    flex-direction: column;
+}
+
+/* para los parrafos del cuerpo  */
+p{
+    font-family: "Bona Nova", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+}
+
+#text, #codigo, h6 {
+    font-size: 35px;
+    font-family: "Bowlby One SC", sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+h6{
+    color: #fff;
+}
+
+/* para el text "empieza hoy con nosotros"  */
+#contenido #lo{
+    margin-bottom: 85px;
+}
+
+/* para el boton de reservar */
+
+#btn-reservar{
+    padding: 10px 60px 10px 60px;
+    border-radius: 5px;
+    border: 1px;
+    color: white;
+    font-family: "Itim", cursive;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 100px;
+}
+
+#co{
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

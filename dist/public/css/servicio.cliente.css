@@ -1,0 +1,18 @@
+#content{
+    height: 91%;
+}
+
+.btn-servicio{
+    width: 200px;
+    height: 140px;
+    border: 3px green solid;
+}
+
+.corte{
+    text-decoration: none;
+    color: green;
+}
+
+.corte:hover{
+    color: white;
+}

@@ -1,0 +1,41 @@
+
+@media(max-width: 767px){
+
+#datos{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+}
+
+#contenidos{
+   flex-direction: column;
+}
+
+.imagen-pefil{
+    position: relative;
+    top: 20px;
+}
+
+#datos{
+    background: #8FBCE9;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#list-group{
+    width: 800px;
+}
+
+#edit{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+a{
+    color: black;
+}
+
+

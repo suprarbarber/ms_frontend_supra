@@ -1,0 +1,29 @@
+/* Inportacion de la fuente goudy bookletter  */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Coiny&family=Goudy+Bookletter+1911&family=Itim&display=swap');
+
+
+.barberos{
+    height: 350px;
+}
+#barber{
+    width: 180px;
+}
+
+#text-help{
+    font-family: "Goudy Bookletter 1911", serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+#btn-siguiente{
+    width: 180px;
+    height: 65px;
+    background: #7ABDFF; 
+    cursor: pointer; 
+    position: absolute;
+    right: 35px;
+}
+
+#barber:hover{
+    box-shadow: 4px 4px 2px -2px gray;
+}
