@@ -71,3 +71,7 @@ a{
     align-items: center;
     justify-content: center;
 }
+
+.filtro{
+    display: none;
+}
