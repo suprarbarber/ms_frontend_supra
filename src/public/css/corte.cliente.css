@@ -1,6 +1,10 @@
 /* Importacion de la fuente Bona nova  */
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap');
 
+body{
+    background-color: rgb(195, 206, 206);
+}
+
 #corte {
     background: #000000;
     width: 225px;

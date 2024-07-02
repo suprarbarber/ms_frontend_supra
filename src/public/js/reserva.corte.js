@@ -72,3 +72,15 @@ const siguientePaso = () => {
         window.location.href = "./reserva-horario"
     }
 }
+
+document.addEventListener('keyup', function(e) {
+
+    if(e.target.matches('#buscador')){
+
+        document.querySelectorAll('.corte').forEach(element => {
+            element.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+            ?element.classList.remove('filtro')
+            :element.classList.add('filtro')
+        });
+    }
+});
