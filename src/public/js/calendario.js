@@ -43,7 +43,7 @@ const renderCalendario = () => {
         let clickedDate = new Date(actualAno, actualMes, clickedDay);
 
         if (clickedDate < new Date()) {
-            localStorage.setItem('clickedPastDate', 'true');
+            localStorage.setItem('dia', 'true');
         } else {
             localStorage.setItem('clickedPastDate', 'false');
         }
