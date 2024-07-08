@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(corteData && corteData.length > 0){
         corteData.forEach(item => {
             const corte = document.createElement('button');
-            corte.className = 'btn btn-dark text-center mx-2 my-2';
+            corte.className = 'btn btn-dark text-center mx-2 my-2 corte';
             corte.id = 'corte';
 
             const imagen = document.createElement('img');
