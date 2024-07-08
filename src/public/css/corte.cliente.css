@@ -17,3 +17,8 @@ body{
 .filtro{
     display: none;
 }
+
+.ima{
+    width: 120px;
+    height: 120px;
+}

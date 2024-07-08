@@ -37,11 +37,13 @@
                     <% datos.forEach(element => { %>
                         <div class="card text-center my-4 mx-2" id="tarjeta" style="width: 250px;">
                             <!-- imagen  -->
-                            <img src="img/producto.png" class="card-img-top" height="150px" alt="...">
+                            <img src="<%= element.url_imagen %>" class="card-img-top" height="200px"  alt="...">
                             <!-- cuerpo  -->
                             <div class="card-body">
                               <h5 class="card-title" id="producto"><%= element.nombre %></h5>
                               <p class="card-text"><%= element.descripcion %> </p>
+                              <p class="card-text"> COP <%= element.precio %> </p>
+
                             </div>
                         </div>
                     <% }); %>

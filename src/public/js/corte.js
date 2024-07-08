@@ -10,16 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if(corteData && corteData.length > 0){
         corteData.forEach(item => {
             const corte = document.createElement('div');
-            corte.className = 'btn text-light text-center mx-2 my-2 corte';
+            corte.className = 'btn text-light text-center mx-2 my-2 corte pb-3';
             corte.id = 'corte';
 
             
 
             const imagen = document.createElement('img');
-            imagen.className = 'mt-2 rounded';
-            imagen.src = './img/usuario.png';
-            imagen.width = 90;
-            imagen.height = 95;
+            imagen.className = 'mt-2 rounded ima';
+            imagen.src = item.url_imagen
             imagen.id = 'imagen';
 
 
