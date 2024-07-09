@@ -24,82 +24,81 @@
     <div class="container-fluid">
         <div class="row">
             <!-- seccion formulario  -->
-            <div class="col-md-6 col-lg-6 py-3" id="l">
+            <div class="col-md-6 col-lg-6 py-1" id="l">
 
                 <!-- icono de atras  -->
                 <a href="./"><i class="bi bi-arrow-left fs-4"></i></a>
 
-                <h1 class="col-12 text-light text-center pt-3 pb-3 mb-3" id="title">¡Hola! Bienvenido a Supra Barber</h1>
+                <h1 class="col-12 text-light text-center pt-3 pb-3 mb-2" id="title">¡Hola! Bienvenido a Supra Barber</h1>
                 
-                <div class="col-md-12 d-flex align-items-center justify-content-center">
+                <div class="col-md-12 center">
 
-                    <div class="borde d-flex align-items-center justify-content-center">
-            
-                        <div class="container text-center py-4 " >
-                            <!-- Se la agrega al formulario la veliadacion de bootstrap -->
-                            <form class="needs-validation" novalidate>
+                    <div class="container text-center py-4">
+                        <!-- Se la agrega al formulario la veliadacion de bootstrap -->
+                        <form class="form" id="form">
 
-                                <div class="col-12">
-                                    <!-- campo donde se solicita el campo  -->
-                                    <input class="form-control mb-3" id="id" type="number" placeholder="Identificacion" required>
-                                    <!-- mensaje de validacion del campo  -->
-                                    <div class="invalid-feedback">
-                                        Es necesario ingresar la identificación
-                                    </div>                                
-                                </div>
-                                <div class="col-12">
-                                    <!-- campo donde se solicita el campo  -->
-                                    <input class="form-control mb-3" id="nombre" type="text" placeholder="Nombre" required>
-                                    <!-- mensaje de validacion del campo  -->
-                                    <div class="invalid-feedback">
-                                        Es necesario ingresar el nombre
-                                    </div>                                
-                                </div>
-                                <div class="col-12">
-                                    <!-- campo donde se solicita el campo  -->
-                                    <input class="form-control mb-3" id="email" type="email" placeholder="Correo Electronico" required autocomplete="current-email">
-                                    <!-- mensaje de validacion del campo  -->
-                                    <div class="invalid-feedback">
-                                        Es necesario ingresar el correo electronico
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <!-- campo donde se solicita el campo  -->
-                                    <input class="form-control mb-3" id="telefono" type="number" placeholder="Telefono" required>
-                                    <!-- mensaje de validacion del campo  -->
-                                    <div class="invalid-feedback">
-                                        Es necesario ingresar el telefono
-                                    </div>                                
-                                </div>
-                                <div class="col-12">
-                                    <!-- campo donde se solicita el campo  -->
-                                    <input class="form-control mb-3" id="contrasena" type="password" placeholder="Contraseña" required autocomplete="current-password">
-                                    <!-- mensaje de validacion del campo  -->
-                                    <div class="invalid-feedback">
-                                        Es necesario ingresar una contraseña
-                                    </div>                                
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <!-- selector donde se solicita el campo  -->
-                                    <select id="roll" class="form-select" required>
-                                        <option>Seleccione un rol</option>
-                                        <option value="cliente">Cliente</option>
-                                        <option value="barbero">Barbero</option>
-                                    </select>
-                                    <!-- mensaje de validacion del campo  -->
-                                    <div class="invalid-feedback">
-                                        Es necesario selccionar un rol
-                                    </div>                                
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button class="btn text-light btn-border-with p-3" id="btn-registrar" onclick="registrar()">Registrar Cuenta</button>
-                                </div>
+                            <!-- campo donde se solicita el id  -->
+                            <div class="col-12 campo form-control column">
+                                <input class="mb-1" id="id" type="number" placeholder="Identificacion">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <i class="bi bi-patch-exclamation-fill"></i>
+                                <small>Error mensaje</small>
+                            </div>
 
-                                <p class=" d-flex align-items-center justify-content-center">¿Ya tienes una cuenta? <a href="./login" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bolder">Iniciar Sesion</a></p>
-                            </form>
-                        </div>
+                            <!-- campo donde se solicita el nombre  -->
+                            <div class="col-12 campo form-control column">
+                                <input class="mb-1" id="nombre" type="text" placeholder="Nombre" required>
+                                <i class="bi bi-patch-check-fill"></i>
+                                <i class="bi bi-patch-exclamation-fill"></i>
+                                <small>Error mensaje</small>                          
+                            </div>
+
+                            <!-- campo donde se solicita el correo  -->
+                            <div class="col-12 campo form-control column">
+                                <input class="mb-1" id="email" type="email" placeholder="Correo Electronico" required autocomplete="current-email">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <i class="bi bi-patch-exclamation-fill"></i>
+                                <small>Error mensaje</small>
+                            </div>
+                            
+                            <!-- campo donde se solicita el telefono  -->
+                            <div class="col-12 campo form-control column">
+                                <input class="mb-1" id="telefono" type="number" placeholder="Telefono" required>
+                                <i class="bi bi-patch-check-fill"></i>
+                                <i class="bi bi-patch-exclamation-fill"></i>
+                                <small>Error mensaje</small>                                
+                            </div>
+                            
+                            <!-- campo donde se solicita la contraseña  -->
+                            <div class="col-12 campo form-control column">
+                                <input class=" mb-1" id="contrasena" type="password" placeholder="Contraseña" required autocomplete="current-password">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <i class="bi bi-patch-exclamation-fill"></i>
+                                <small>Error mensaje</small>                                
+                            </div>
+                            
+                            <!-- campo donde se solicita el rol  -->
+                            <div class="col-12 mb-2 campo form-control">
+                                <select id="rol" class="form-select">
+                                    <option>Seleccione un rol</option>
+                                    <option value="cliente">Cliente</option>
+                                    <option value="barbero">Barbero</option>
+                                </select>
+                                <i class="bi bi-patch-check-fill"></i>
+                                <i class="bi bi-patch-exclamation-fill"></i>
+                                <small>Error mensaje</small>                   
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn text-light btn-border-with p-3" id="btn-registrar" onclick="registrar()">Registrar Cuenta</button>
+                            </div>
+
+                            <p class=" d-flex align-items-center justify-content-center">¿Ya tienes una cuenta? <a href="./login" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bolder">Iniciar Sesion</a></p>
+                        </form>
                     </div>
                 </div>
+                
+            
+                
             </div>
 
             <!-- seccion imagen  -->
@@ -115,7 +114,7 @@
     <script src="./plugins/alertifyjs/alertify.min.js"></script>
 
     <!-- script personal  -->
-    <script src="../js/registro.js"></script>
+    <script src="./js/registro.js"></script>
 
 </body>
 </html>
