@@ -1,10 +1,45 @@
-const dias = document.getElementById('num-dias');
+const lis = document.querySelector('.num-dias').getElementsByTagName('li');
 
-dias.addEventListener('click', function(event) {
-    event.target.classList.add('seleccionado');
-    id_dia = `${event.target.id}`
-    sessionStorage.setItem('id_dia', id_dia);
-})
+[].forEach.call(lis, element => {
+    element.addEventListener('click', () => {
+        let ano = document.querySelector('.ano');
+        let mes = document.querySelector('.mes');
+        element.className = 'seleccionado';
+        let fechaHoy = sessionStorage.getItem('fechaHoy');
+        let fechaFresh = JSON.parse(fechaHoy)[0];
+
+        let intDia = parseInt(fechaFresh.day); //hoy       
+        let intMes = parseInt(fechaFresh.month); //hoy    
+        let intAno = parseInt(fechaFresh.year); //hoy
+
+        console.log(mes.id);
+        let intDiaSelect = parseInt(element.id); //seleccionado
+        let intMesSelect = parseInt(mes.id) + 1; //selccionado
+        let intAnoSelect = parseInt(ano.innerText); //seleccionado
+
+        let fechaHoyDate = new Date(intAno, intMes - 1, intDia);
+        let fechaSeleccionadaDate = new Date(intAnoSelect, intMesSelect - 1, intDiaSelect);
+
+
+        if(fechaSeleccionadaDate < fechaHoyDate){
+            Swal.fire({
+              position: "top-end",
+              icon: "error",
+              title: "La fecha ya ha pasado",
+              timer: 1500
+            });
+            element.className = 'noseleccionado'
+        }else{
+            sessionStorage.setItem('id_dia', intDiaSelect)
+        }
+        
+        console.log(intDiaSelect, intMesSelect, intAnoSelect);
+    
+        console.log(intDia, intMes , intAno)
+
+    });
+});
+
 
 /**
  * Esta funcion es para obtener el id del boton
@@ -76,12 +111,17 @@ function finalizar() {
                 sessionStorage.removeItem('id_dia')
 
                 Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "Se ha guardado con exito!",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+                    title: "Custom width, padding, color, background.",
+                    width: 600,
+                    padding: "3em",
+                    color: "#716add",
+                    backdrop: `
+                      rgba(0,0,123,0.4)
+                      url("https://res.cloudinary.com/dfuizwycd/image/upload/v1720575399/dhiren1234-unscreen_o3ofxz.gif")
+                      left top
+                      no-repeat
+                    `
+                  });
 
                 setTimeout(() => {
                     window.location.href = "./inicio"

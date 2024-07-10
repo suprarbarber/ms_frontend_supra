@@ -74,6 +74,9 @@
 .seleccionado {
     background-color: #5fdccd59;
 } 
+.noseleccionado {
+    background-color: black;
+} 
 
 
 /* fin calendario  */

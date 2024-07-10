@@ -1,10 +1,44 @@
-const dias = document.getElementById('num-dias');
+const lis = document.querySelector('.num-dias').getElementsByTagName('li');
 
-dias.addEventListener('click', function(event) {
-    event.target.classList.add('seleccionado');
-    id_dia = `${event.target.id}`
-    sessionStorage.setItem('new_id_dia', id_dia);
-})
+[].forEach.call(lis, element => {
+    element.addEventListener('click', () => {
+        let ano = document.querySelector('.ano');
+        let mes = document.querySelector('.mes');
+        element.className = 'seleccionado';
+        let fechaHoy = sessionStorage.getItem('fechaHoy');
+        let fechaFresh = JSON.parse(fechaHoy)[0];
+
+        let intDia = parseInt(fechaFresh.day); //hoy       
+        let intMes = parseInt(fechaFresh.month); //hoy    
+        let intAno = parseInt(fechaFresh.year); //hoy
+
+        console.log(mes.id);
+        let intDiaSelect = parseInt(element.id); //seleccionado
+        let intMesSelect = parseInt(mes.id) + 1; //selccionado
+        let intAnoSelect = parseInt(ano.innerText); //seleccionado
+
+        let fechaHoyDate = new Date(intAno, intMes - 1, intDia);
+        let fechaSeleccionadaDate = new Date(intAnoSelect, intMesSelect - 1, intDiaSelect);
+
+
+        if(fechaSeleccionadaDate < fechaHoyDate){
+            Swal.fire({
+              position: "top-end",
+              icon: "error",
+              title: "La fecha ya ha pasado",
+              timer: 1500
+            });
+            element.className = 'noseleccionado'
+        }else{
+            sessionStorage.setItem('new_id_dia', intDiaSelect)
+        }
+        
+        console.log(intDiaSelect, intMesSelect, intAnoSelect);
+    
+        console.log(intDia, intMes , intAno)
+
+    });
+});
 
 /**
  * Esta funcion es para obtener el id del boton
@@ -16,10 +50,12 @@ function turno(btn) {
 }
 
 
-
 function finalizar() {
     const idDia = sessionStorage.getItem('new_id_dia')
-    if(idDia == null || idDia == ""){
+    const idTurno = sessionStorage.getItem("new_id_turno")
+
+    if(idDia === null || idTurno === null){
+        
         // alerta de si no seleccionado nada
         const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
@@ -34,10 +70,11 @@ function finalizar() {
 
         alertPlaceholder.append(wrapper)
         }
+        
+        appendAlert('Debes seleccionar la fecha y el turno!', 'danger')
+    
 
-        appendAlert('No has seleccionado ningún horario!', 'danger')
     }else{
-
         const idReserva = sessionStorage.getItem('id_reserva');
         const idTurno = sessionStorage.getItem('new_id_turno');
         const url = sessionStorage.getItem('urlsupra');

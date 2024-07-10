@@ -1,10 +1,10 @@
-const diaActual = document.querySelector('.dia-actual');
+
 const mes = document.querySelector('.mes');
 const ano = document.querySelector('.ano');
 
 const diaTag = document.querySelector('.num-dias');
-const nextIcon = document.querySelectorAll('.btn-next');
-const prevIcon = document.querySelectorAll('.btn-prev');
+const nextIcon = document.querySelector('.btn-next');
+const prevIcon = document.querySelector('.btn-prev');
 
 // Trae la fecha, el mes y el año actual 
 let fecha = new Date();
@@ -21,62 +21,71 @@ const renderCalendario = () => {
     let ultimoFechaUltimoMes = new Date(actualAno, actualMes, 0).getDate(); // captura la última fecha del mes anterior
     let liTag = '';
 
+    // mes pasado 
     for (let i = primerDiaMes; i > 0; i--) {
-        liTag += `<li id="01" class="inactivos">${ultimoFechaUltimoMes - i + 1}</li>`;
+        liTag += `<li class="inactivos" id='${ultimoFechaUltimoMes - i + 1}'>${ultimoFechaUltimoMes - i + 1}</li>`;
     }
 
+    // mi mes
     for (let i = 1; i <= ultimoFechaMes; i++) {
         let hoy = i === fecha.getDate() && actualMes === new Date().getMonth() && actualAno === new Date().getFullYear() ? 'dia-actual' : "";
-        liTag += `<li class="${hoy}" id="dia-${i}">${i}</li>`;
+
+        if(i === fecha.getDate() && actualMes === new Date().getMonth() && actualAno === new Date().getFullYear()){
+
+            const selectedDate = [{
+                day: fecha.getDate(),
+                month: fecha.getMonth() + 1, // Months are zero-indexed (January is 0)
+                year: fecha.getFullYear()
+            }];
+            
+            const fechaFresh = JSON.stringify(selectedDate)
+
+            sessionStorage.setItem('fechaHoy', fechaFresh)
+            
+        }
+            
+        liTag += `<li class="${hoy}" id="${i}">${i}</li>`;
+
+        
     }
 
+    // siguiente mes 
     for (let i = ultimoDiaMes; i < 6; i++) {
-        liTag += `<li id="01" class="inactivos">${i - ultimoDiaMes + 1}</li>`;
+        liTag += `<li class="inactivos" id='${i - ultimoDiaMes + 1}'>${i - ultimoDiaMes + 1}</li>`;
     }
 
     mes.innerText = `${meses[actualMes]}`;
+    mes.id = actualMes;
     ano.innerText = `${actualAno}`;
     diaTag.innerHTML = liTag;
 
-    // Agregar eventos de click a cada día
-    document.querySelectorAll('.num-dias li').forEach(day => {
-        day.addEventListener('click', () => {
-            let clickedDay = parseInt(day.innerText);
-            let clickedDate = new Date(actualAno, actualMes, clickedDay);
-
-            if (clickedDate < new Date()) {
-                localStorage.setItem('dia', 'true');
-            } else {
-                localStorage.setItem('dia', 'false');
-            }
-        });
-    });
 };
 
 renderCalendario();
 
-nextIcon.forEach(icon => {
-    icon.addEventListener('click', () => {
-        actualMes = actualMes + 1;
+nextIcon.addEventListener('click', () => {
+    actualMes = actualMes + 1;
 
-        if (actualMes > 11) {
-            actualMes = 0;
-            actualAno += 1;
-        }
+    if (actualMes > 11) {
+        actualMes = 0;
+        actualAno += 1;
+    }
 
-        renderCalendario();
-    });
+    renderCalendario();
 });
 
-prevIcon.forEach(icon => {
-    icon.addEventListener('click', () => {
-        actualMes = actualMes - 1;
+prevIcon.addEventListener('click', () => {
+    actualMes = actualMes - 1;
 
-        if (actualMes < 0) {
-            actualMes = 11;
-            actualAno -= 1;
-        }
+    if (actualMes < 0) {
+        actualMes = 11;
+        actualAno -= 1;
+    }
 
-        renderCalendario();
-    });
+    renderCalendario();
 });
+
+
+
+
+
