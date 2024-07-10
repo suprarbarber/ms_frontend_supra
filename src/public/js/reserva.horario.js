@@ -111,7 +111,7 @@ function finalizar() {
                 sessionStorage.removeItem('id_dia')
 
                 Swal.fire({
-                    title: "Custom width, padding, color, background.",
+                    title: "Tu cita ha sido realizada.",
                     width: 600,
                     padding: "3em",
                     color: "#716add",
