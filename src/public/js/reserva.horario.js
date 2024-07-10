@@ -53,7 +53,7 @@ function turno(btn) {
 function finalizar() {
     const idHorario = sessionStorage.getItem('id_turno')
     if(idHorario == null || idHorario == ""){
-        // alerta de si no seleccionado nada
+        // alerta de si no  seleccionado nada
         const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
 
         const appendAlert = (message, type) => {

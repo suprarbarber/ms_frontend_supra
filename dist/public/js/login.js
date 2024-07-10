@@ -26,15 +26,24 @@ async function loguin() {
     await fetch(urlsupra, options)
     .then(res => res.json())
     .then(data => {
-        if(data.error == true){
-            alertify.error('Algo está errado');
+        if(data.status == 401 ){
+            alertify.error('Campos incompletos');
         }else{
-            console.log(data.body);
-            sessionStorage.setItem("token", data.body.token)
-            sessionStorage.setItem("id", data.body.id)
-            
-            window.location.href = "./splash"                                
+            if(data.status === 405){
+                alertify.error('Correo errado');
+            }else{
+                if(data.status === 406){
+                    alertify.error('Contraseña errada');
+                }else{
+                    console.log(data.body);
+                    sessionStorage.setItem("token", data.body.token)
+                    sessionStorage.setItem("id", data.body.id)
+                    
+                    window.location.href = "./splash"                                
+                }
+            }
         }
+            
     })
     .catch(err => {
         console.log("Tenemos un problema", err);

@@ -22,14 +22,6 @@
 }
 
 
-#email, #contrasena{
-    border-bottom: 0.5px black solid;
-    background-color: rgb(240, 239, 239);
-}
-input{
-    height: 50px;
-}
-
 #btn-registrar{
     background: #03167C;
     height: 50px;
@@ -56,11 +48,73 @@ h4{
 }
 
 @media(max-width: 767px){
-    .needs-validation{
-        margin-top: 15px;
-    }
+    
 }
 
 a{
     color: black;
+}
+
+.container{
+    width: 450px;
+}
+.column{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.campo{
+    position: relative;
+    height: 95px;
+    background: transparent;
+    border: transparent;
+
+}
+
+.form-control input, .form-select{
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#id{
+    height: 50px;
+}
+
+.form-control i, .form-select i{
+    visibility: hidden;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+
+}
+
+.form-control-succes i.bi-patch-check-fill{
+    color: rgb(48, 223, 45);
+    visibility: visible;
+}
+.form-control.error i.bi-patch-exclamation-fill{
+    color: rgb(243, 27, 27);
+    visibility: visible;
+    border: 1px rgb(243, 27, 27) solid;
+}
+
+.form-control small{
+    color: rgb(243, 27, 27);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
