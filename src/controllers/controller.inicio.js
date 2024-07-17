@@ -6,7 +6,7 @@
 import { config } from "dotenv";
 config();
 
-
+const url = process.env.BACKEND_URL
 
 /**
  * Esta funcion es para la vista inicial de la pagina
@@ -38,8 +38,9 @@ const login = (req, res ) => {
  * @param {object} res respuesta
  */
 const registro = (req, res ) => {
+    const options = {url: url};
     // Se llama a la vista y se le manda la variable
-    res.render('view.registro.ejs');
+    res.render('view.registro.ejs', options);
 };
 
 export { inicio, login, registro}
