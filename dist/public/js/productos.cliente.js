@@ -44,7 +44,7 @@ const reporte = (event) => {
 
   // Añadir información adicional
   reporte.text(10, fila += 10, "Autor(a): Angie Nataly Nohava Vargas");
-  reporte.text(10, fila += 10, `Fecha: ${fecha.toLocaleDateString()}`);
+  reporte.text(10, fila += 10, `Fecha: ${fecha.toLocaleDateString()}`); 
 
   // Cargar y dibujar una imagen
   const imagen = new Image();

@@ -146,7 +146,7 @@ const registrar = () => {
 function mostrarError(campo, mensaje) {
     // Remover mensajes de error previos
     const mensajePrevio = campo.querySelector('.text-danger');
-    if (mensajePrevio) {
+    if (mensajePrevio){
         mensajePrevio.remove();
     }
     // Crear y agregar nuevo mensaje de error

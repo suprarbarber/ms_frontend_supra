@@ -11,6 +11,7 @@ var _dotenv = require("dotenv");
  */
 
 (0, _dotenv.config)();
+var url = process.env.BACKEND_URL;
 
 /**
  * Esta funcion es para la vista inicial de la pagina
@@ -41,6 +42,9 @@ var login = exports.login = function login(req, res) {
  * @param {object} res respuesta
  */
 var registro = exports.registro = function registro(req, res) {
+  var options = {
+    url: url
+  };
   // Se llama a la vista y se le manda la variable
-  res.render('view.registro.ejs');
+  res.render('view.registro.ejs', options);
 };

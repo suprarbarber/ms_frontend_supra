@@ -38,55 +38,44 @@
                         <form class="form" id="form">
 
                             <!-- campo donde se solicita el id  -->
-                            <div class="col-12 campo form-control column">
+                            <div class="col-12 campo form-control column campo-id">
                                 <input class="mb-1" id="id" type="number" placeholder="Identificacion">
-                                <i class="bi bi-patch-check-fill"></i>
-                                <i class="bi bi-patch-exclamation-fill"></i>
-                                <small>Error mensaje</small>
                             </div>
 
                             <!-- campo donde se solicita el nombre  -->
-                            <div class="col-12 campo form-control column">
+                            <div class="col-12 campo form-control column campo-nombre">
                                 <input class="mb-1" id="nombre" type="text" placeholder="Nombre" required>
-                                <i class="bi bi-patch-check-fill"></i>
-                                <i class="bi bi-patch-exclamation-fill"></i>
-                                <small>Error mensaje</small>                          
+                                                         
                             </div>
 
                             <!-- campo donde se solicita el correo  -->
-                            <div class="col-12 campo form-control column">
+                            <div class="col-12 campo form-control column campo-correo">
                                 <input class="mb-1" id="email" type="email" placeholder="Correo Electronico" required autocomplete="current-email">
-                                <i class="bi bi-patch-check-fill"></i>
-                                <i class="bi bi-patch-exclamation-fill"></i>
-                                <small>Error mensaje</small>
+
                             </div>
                             
                             <!-- campo donde se solicita el telefono  -->
-                            <div class="col-12 campo form-control column">
+                            <div class="col-12 campo form-control column campo-telefono">
                                 <input class="mb-1" id="telefono" type="number" placeholder="Telefono" required>
-                                <i class="bi bi-patch-check-fill"></i>
-                                <i class="bi bi-patch-exclamation-fill"></i>
-                                <small>Error mensaje</small>                                
+                                                              
                             </div>
                             
                             <!-- campo donde se solicita la contraseña  -->
-                            <div class="col-12 campo form-control column">
+                            <div class="col-12 campo form-control column campo-clave">
                                 <input class=" mb-1" id="contrasena" type="password" placeholder="Contraseña" required autocomplete="current-password">
-                                <i class="bi bi-patch-check-fill"></i>
-                                <i class="bi bi-patch-exclamation-fill"></i>
-                                <small>Error mensaje</small>                                
+                                                          
                             </div>
                             
                             <!-- campo donde se solicita el rol  -->
-                            <div class="col-12 mb-2 campo form-control">
+                            <div class="col-12 mb-2 campo form-control campo-roll">
                                 <select id="rol" class="form-select">
                                     <option>Seleccione un rol</option>
                                     <option value="cliente">Cliente</option>
                                     <option value="barbero">Barbero</option>
                                 </select>
-                                <i class="bi bi-patch-check-fill"></i>
+                                <!-- <i class="bi bi-patch-check-fill"></i>
                                 <i class="bi bi-patch-exclamation-fill"></i>
-                                <small>Error mensaje</small>                   
+                                <small>Error mensaje</small>                    -->
                             </div>
                             <div class="d-grid gap-2">
                                 <button type="button" class="btn text-light btn-border-with p-3" id="btn-registrar" onclick="registrar()">Registrar Cuenta</button>
@@ -100,6 +89,7 @@
             
                 
             </div>
+            <input type="hidden" id="url" value="<%= url %>">
 
             <!-- seccion imagen  -->
             <div class="col-md-6 d-sm-block d-none" id="img">
